@@ -2,2274 +2,1242 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🇪🇸 바르셀로나 가족 여행 완벽 동선 가이드북 (7박 9일 인터랙티브)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>🇪🇸 바르셀로나 가족여행 모바일 가이드북 (7박 9일)</title>
 <style>
   :root {
-    --primary: #D84315;
-    --primary-light: #FBE9E7;
-    --primary-dark: #BF360C;
-    --secondary: #E65100;
-    --accent: #FFA000;
+    --primary: #C8380A;
+    --primary-light: #FBECE8;
+    --primary-dark: #9E2600;
+    --accent: #E65100;
     --navy: #0D47A1;
-    --navy-light: #E3F2FD;
+    --navy-light: #EBF3FC;
     --teal: #00796B;
-    --teal-light: #E0F2F1;
+    --teal-light: #E6F5F3;
+    --bg-page: #F8F9FA;
     --card-bg: #FFFFFF;
-    --bg-page: #FBF9F5;
-    --text-main: #212121;
-    --text-muted: #616161;
-    --border-color: #E0D7CE;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    --shadow-hover: 0 8px 24px rgba(216, 67, 21, 0.15);
+    --text-main: #1E293B;
+    --text-sub: #475569;
+    --text-muted: #64748B;
+    --border: #E2E8F0;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", Roboto, sans-serif;
     background-color: var(--bg-page);
     color: var(--text-main);
-    line-height: 1.65;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* Header Section */
-  header {
-    background: linear-gradient(135deg, #BF360C 0%, #D84315 50%, #FF6F00 100%);
-    color: white;
-    padding: 40px 20px 32px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  }
-
-  .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .badge-banner {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 4px 16px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    font-size: 32px;
-    font-weight: 900;
-    margin-bottom: 12px;
-    letter-spacing: -0.5px;
-  }
-
-  .header-sub {
-    font-size: 16px;
-    color: #FFF3E0;
-    max-width: 780px;
-    margin: 0 auto 20px;
     line-height: 1.5;
+    font-size: 14px;
+    padding-bottom: 70px;
+    word-break: keep-all;
   }
 
-  .meta-grid {
+  /* Compact Mobile Header */
+  header {
+    background: linear-gradient(135deg, #B92B00 0%, #D84315 100%);
+    color: white;
+    padding: 16px 14px 14px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .header-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .header-meta {
+    font-size: 12px;
+    color: #FFE0B2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
-    margin-top: 16px;
+    gap: 6px;
+  }
+  .header-meta span {
+    background: rgba(0,0,0,0.15);
+    padding: 2px 8px;
+    border-radius: 6px;
   }
 
-  .meta-tag {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(4px);
-    padding: 6px 14px;
-    border-radius: 18px;
-    font-size: 13px;
-    font-weight: 600;
+  /* Quick Access Action Bar */
+  .quick-links-bar {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .quick-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-  }
-
-  /* Top Master Dashboard Section */
-  .top-dashboard-section {
-    background: #ffffff;
-    border-bottom: 2px solid var(--border-color);
-    padding: 22px 20px 24px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  }
-
-  .top-dashboard-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .dash-top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .dash-main-title {
-    font-size: 18px;
-    font-weight: 800;
+    gap: 5px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    background: #FFF;
     color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  }
+  .quick-btn.primary {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
   }
 
-  .dash-toggle-btn {
-    background: var(--bg-page);
-    border: 1px solid #cbd5e1;
+  /* Sticky Horizontal Day Tabs */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #FFFFFF;
+    border-bottom: 2px solid #FFCCBC;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .nav-scroll {
+    display: flex;
+    gap: 6px;
+    padding: 8px 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-scroll::-webkit-scrollbar { display: none; }
+  
+  .nav-tab {
+    flex-shrink: 0;
+    background: #F1F5F9;
+    border: 1px solid #CBD5E1;
     color: #475569;
-    padding: 6px 14px;
+    padding: 7px 12px;
     border-radius: 20px;
     font-size: 12.5px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .dash-toggle-btn:hover {
-    background: #f1f5f9;
-    color: #1e293b;
-    border-color: #94a3b8;
-  }
-
-  .dash-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 18px;
-    transition: all 0.3s ease;
-  }
-
-  .dash-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 18px 16px;
-    display: flex;
-    flex-direction: column;
-    border: 1.5px solid #e2e8f0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .dash-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
-  }
-
-  .dash-card.card-booking {
-    border-color: #bfdbfe;
-    background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
-  }
-
-  .dash-card.card-routine {
-    border-color: #fed7aa;
-    background: linear-gradient(180deg, #fffbf5 0%, #ffffff 100%);
-  }
-
-  .dash-card.card-packing {
-    border-color: #bbf7d0;
-    background: linear-gradient(180deg, #f7fdf9 0%, #ffffff 100%);
-  }
-
-  .dash-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .dash-card-title {
-    font-size: 15.5px;
-    font-weight: 800;
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .dash-badge {
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 10px;
     white-space: nowrap;
+    transition: all 0.15s;
   }
-
-  .badge-green { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
-  .badge-orange { background: #ffedd5; color: #c2410c; border: 1px solid #fed7aa; }
-  .badge-blue { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
-
-  .dash-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
-  }
-
-  .dash-item {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .dash-item-icon {
-    font-size: 15px;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  .dash-item-body {
-    flex: 1;
-  }
-
-  .dash-item-title {
-    font-weight: 700;
-    color: var(--text-main);
-  }
-
-  .dash-item-desc {
-    color: #475569;
-    margin-top: 2px;
-    font-size: 12px;
-    line-height: 1.45;
-  }
-
-  .dash-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 1px 6px;
-    border-radius: 4px;
-    margin-left: 4px;
-    background: #f1f5f9;
-    color: #1e293b;
-    border: 1px solid #cbd5e1;
-  }
-  .dash-tag.highlight {
-    background: #eff6ff;
-    color: #1d4ed8;
-    border-color: #bfdbfe;
-  }
-
-  /* Sticky Navigation */
-  .sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid #FFCCBC;
-    padding: 10px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  .nav-scroll {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .nav-scroll::-webkit-scrollbar { display: none; }
-
-  .nav-tab {
-    background: var(--bg-page);
-    border: 1px solid #E0E0E0;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--text-muted);
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s;
-    text-decoration: none;
-  }
-
-  .nav-tab:hover {
-    background: var(--primary-light);
-    color: var(--primary);
-    border-color: var(--primary);
-  }
-
   .nav-tab.active {
     background: var(--primary);
     color: white;
     border-color: var(--primary);
-    box-shadow: 0 2px 8px rgba(216, 67, 21, 0.3);
+    box-shadow: 0 2px 6px rgba(200, 56, 10, 0.3);
+  }
+
+  /* Collapsible Master Dashboard Accordion */
+  .dashboard-accordion {
+    max-width: 900px;
+    margin: 10px 12px 6px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .dash-toggle-header {
+    padding: 11px 14px;
+    background: #FFF8E1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 13.5px;
+    color: #78350F;
+  }
+  .dash-body {
+    display: none;
+    padding: 12px 14px;
+    border-top: 1px solid #FFE082;
+    background: #FFFEF7;
+    font-size: 12.5px;
+    color: #334155;
+  }
+  .dash-body.open { display: block; }
+  .dash-sec-title {
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--primary-dark);
+    margin: 8px 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .dash-sec-title:first-child { margin-top: 0; }
+  .dash-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .dash-bullets li {
+    position: relative;
+    padding-left: 14px;
+    line-height: 1.45;
+  }
+  .dash-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--primary);
+    font-weight: bold;
   }
 
   /* Main Container */
   main {
-    max-width: 1200px;
-    margin: 32px auto 48px;
-    padding: 0 16px;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 0 10px;
   }
 
-  /* Guidebook View Options */
-  .view-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .section-heading {
-    font-size: 22px;
-    font-weight: 900;
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .section-heading::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 22px;
-    background: var(--primary);
-    border-radius: 3px;
-  }
-
-  .btn-group {
-    display: flex;
-    gap: 8px;
-  }
-
-  .btn {
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 13.5px;
-    font-weight: 700;
-    border: 1px solid var(--border-color);
-    background: white;
-    color: var(--text-main);
-    cursor: pointer;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
-  }
-
-  .btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-  }
-
-  .btn-primary {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-  }
-  .btn-primary:hover {
-    background: var(--primary-dark);
-    color: white;
-  }
-
-  /* Days Grid */
-  .days-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 24px;
-  }
-
-  /* Single Day Card */
+  /* Days View Container */
   .day-card {
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .day-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
   }
 
   .day-card-header {
-    background: linear-gradient(135deg, #FFF8E1 0%, #FFE0B2 100%);
-    padding: 18px 20px;
-    border-bottom: 1px solid #FFE0B2;
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D6 100%);
+    padding: 12px 14px 10px;
+    border-bottom: 1px solid #FFD8BE;
   }
-
   .day-badge-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
-
   .day-badge {
     background: var(--primary);
     color: white;
-    font-size: 13px;
+    font-size: 11.5px;
     font-weight: 800;
-    padding: 3px 10px;
-    border-radius: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
   }
-
   .day-date {
-    font-size: 13.5px;
+    font-size: 12.5px;
     font-weight: 700;
-    color: #BF360C;
+    color: var(--primary-dark);
   }
-
   .day-title {
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 800;
-    color: #3E2723;
+    color: #1E293B;
     line-height: 1.35;
-    margin-top: 4px;
   }
-
-  .day-intro {
-    font-size: 13.5px;
-    color: #4E342E;
-    line-height: 1.55;
-    margin-top: 8px;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 10px 12px;
-    border-radius: 8px;
+  .day-summary-pill {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #5C2B14;
+    background: rgba(255,255,255,0.8);
+    padding: 5px 8px;
+    border-radius: 6px;
     border-left: 3px solid var(--primary);
+    line-height: 1.4;
   }
 
-  /* Timeline Stream */
+  /* Compact Timeline */
   .timeline-container {
-    padding: 20px 20px 10px;
-    flex-grow: 1;
+    padding: 14px 12px 6px;
   }
-
   .timeline-list {
     position: relative;
-    padding-left: 32px;
+    padding-left: 26px;
   }
-
   .timeline-list::before {
     content: '';
     position: absolute;
-    top: 14px;
-    bottom: 24px;
-    left: 14px;
-    width: 2.5px;
-    background: linear-gradient(180deg, #FFB74D 0%, #FF7043 100%);
-    border-radius: 2px;
+    top: 10px;
+    bottom: 20px;
+    left: 10px;
+    width: 2px;
+    background: #CBD5E1;
   }
 
   .timeline-node {
     position: relative;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
-
-  .node-icon-circle {
+  .node-icon {
     position: absolute;
-    left: -32px;
+    left: -26px;
     top: 2px;
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: white;
     border: 2px solid var(--primary);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 11px;
     z-index: 2;
   }
 
   .node-content {
-    background: #FAFAFA;
-    border: 1px solid #EEEEEE;
-    border-radius: 10px;
-    padding: 10px 14px;
-    transition: background 0.2s;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
   }
-  .node-content:hover {
-    background: #FFF9C4;
-    border-color: #FFE082;
-  }
-
   .node-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 4px;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 3px;
   }
-
   .node-name {
-    font-size: 14.5px;
+    font-size: 13.5px;
     font-weight: 800;
-    color: var(--text-main);
+    color: #0F172A;
   }
-
   .node-name a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dotted var(--primary);
+    color: #0F172A;
+    text-decoration: underline;
+    text-decoration-color: #CBD5E1;
   }
-  .node-name a:hover {
-    color: var(--primary);
-  }
-
   .node-time {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--primary);
-    background: #FFF3E0;
-    padding: 2px 7px;
-    border-radius: 8px;
-  }
-
-  .node-detail {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.45;
-  }
-
-  .node-badge {
-    display: inline-block;
-    margin-top: 6px;
+    flex-shrink: 0;
     font-size: 11px;
     font-weight: 700;
-    padding: 2px 8px;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 2px 6px;
     border-radius: 6px;
   }
-
-  .badge-confirmed {
-    background: #E8F5E9;
-    color: #2E7D32;
-    border: 1px solid #C8E6C9;
+  .node-desc {
+    font-size: 12px;
+    color: var(--text-sub);
+    line-height: 1.4;
   }
-
-  .badge-recommended {
-    background: #E3F2FD;
-    color: #1565C0;
-    border: 1px solid #BBDEFB;
+  .node-desc strong {
+    color: #0F172A;
   }
-
-  .badge-alert {
-    background: #FFEBEE;
-    color: #C62828;
-    border: 1px solid #FFCDD2;
-  }
-
-  /* Transit Step Divider */
-  .transit-step {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: -6px 0 12px 6px;
-    font-size: 11.5px;
-    color: #8D6E63;
+  .node-badge {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 10.5px;
     font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 4px;
   }
+  .badge-done { background: #DCFCE7; color: #166534; border: 1px solid #BBF7D0; }
+  .badge-plan { background: #DBEAFE; color: #1E40AF; border: 1px solid #BFDBFE; }
+  .badge-alert { background: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
 
-  .transit-pill {
-    background: #EFEBE9;
-    padding: 2px 8px;
-    border-radius: 10px;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    border: 1px solid #D7CCC8;
-  }
-
-  /* Card Footer (Tips & Alerts) */
-  .day-card-footer {
-    background: #FDFBF7;
-    border-top: 1px solid #EFEBE9;
-    padding: 16px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .tip-box {
-    background: #FFFDE7;
-    border-left: 3px solid #FBC02D;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12.5px;
-    line-height: 1.5;
-    color: #5D4037;
-  }
-
-  .alert-box {
-    background: #FBE9E7;
-    border-left: 3px solid #FF5722;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12.5px;
-    line-height: 1.5;
-    color: #BF360C;
-  }
-
-  /* Suburban Tour Highlight Box */
-  .highlight-card {
-    background: #E8F5E9;
-    border: 1.5px solid #81C784;
-    border-radius: 12px;
-    padding: 14px;
-    margin: 12px 0;
-  }
-  .highlight-card h4 {
-    font-size: 14px;
-    color: #2E7D32;
-    margin-bottom: 6px;
+  /* Transit Divider */
+  .transit-divider {
     display: flex;
     align-items: center;
     gap: 6px;
-  }
-  .highlight-card p {
-    font-size: 12.5px;
-    color: #1B5E20;
-    line-height: 1.5;
-  }
-  .highlight-links {
-    margin-top: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .tour-btn {
-    font-size: 12px;
-    background: white;
-    color: #2E7D32;
-    border: 1px solid #81C784;
-    padding: 4px 10px;
-    border-radius: 6px;
-    text-decoration: none;
+    margin: -4px 0 8px 4px;
+    font-size: 11px;
+    color: #64748B;
     font-weight: 700;
   }
-  .tour-btn:hover {
-    background: #C8E6C9;
+  .transit-pill {
+    background: #F1F5F9;
+    padding: 2px 7px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
   }
 
-  /* Comparison Box (Sixtyfour vs Suites Avenue) */
-  .residence-box {
-    background: #F3E5F5;
-    border: 1px solid #CE93D8;
-    border-radius: 10px;
-    padding: 12px;
-    margin: 10px 0;
-    font-size: 12.5px;
-    color: #4A148C;
-  }
-  .residence-box strong { color: #6A1B9A; }
-
-  /* Bottom Actions Bar */
-  .bottom-banner {
-    background: white;
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 24px;
-    margin-top: 36px;
-    text-align: center;
-    box-shadow: var(--shadow);
-  }
-
-  .bottom-banner h3 {
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 8px;
-    color: var(--text-main);
-  }
-
-  .bottom-banner p {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 18px;
-  }
-
-  .action-buttons {
+  /* Card Bottom Tip */
+  .day-footer-tip {
+    background: #FFFDE7;
+    border-top: 1px solid #FFF59D;
+    padding: 8px 12px;
+    font-size: 11.5px;
+    color: #78350F;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .day-footer-tip span:first-child { flex-shrink: 0; }
+
+  /* Galaxy Fold & Tablet Layout Optimization */
+  @media (min-width: 620px) {
+    body { font-size: 14.5px; }
+    h1 { font-size: 22px; }
+    .header-meta { font-size: 13px; }
+    main { padding: 0 16px; }
+    .timeline-container { padding: 18px 16px 10px; }
+    .node-name { font-size: 14.5px; }
+    .node-desc { font-size: 13px; }
+    .day-title { font-size: 18px; }
+    .quick-btn { font-size: 13px; padding: 7px 14px; }
   }
 
-  /* Footer */
-  footer {
+  /* Bottom Float Action */
+  .bottom-quick-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--border);
+    padding: 8px 14px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+  }
+  .bottom-quick-btn {
+    flex: 1;
+    margin: 0 4px;
     text-align: center;
-    padding: 30px 20px;
-    color: var(--text-muted);
-    font-size: 13px;
-    border-top: 1px solid var(--border-color);
-    background: white;
+    background: #F8FAFC;
+    border: 1px solid #CBD5E1;
+    padding: 8px 6px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1E293B;
+    text-decoration: none;
   }
-
-  /* Responsive / Print */
-  @media print {
-    .sticky-nav, .view-controls, .btn-group, .bottom-banner { display: none !important; }
-    body { background: white; color: black; padding: 0; }
-    .day-card { break-inside: avoid; border: 1px solid #CCC; box-shadow: none; margin-bottom: 20px; }
-    header { background: #BF360C; color: white; }
-  }
-
-  @media (max-width: 768px) {
-    h1 { font-size: 24px; }
-    .header-sub { font-size: 14px; }
-    .days-grid { grid-template-columns: 1fr; }
-    .day-column { min-width: 100%; }
-    .summary-container { grid-template-columns: 1fr; }
+  .bottom-quick-btn.highlight {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
   }
 </style>
 </head>
 <body>
 
-<!-- Header -->
+<!-- Compact Header -->
 <header>
-  <div class="header-container">
-    <div class="badge-banner">✨ Barcelona Family Travel Interactive Guidebook</div>
-    <h1>🇪🇸 바르셀로나 가족 여행 일자별 완벽 동선 가이드북</h1>
-    <p class="header-sub">
-      2026.12.04(금) ~ 12.12(토) [7박 9일] | 가족 4인(부모 2, 초6 쌍둥이 여아 2) 맞춤형 일자별 동선 & 실전 여행 가이드
-    </p>
-    <div class="meta-grid">
-      <span class="meta-tag">🗓️ 2026.12.04(금) ~ 12.12(토) [7박 9일]</span>
-      <span class="meta-tag">👨‍👩‍👧‍👧 가족 4인 (부모 2, 초6 쌍둥이 여아 2)</span>
-      <span class="meta-tag">✈️ 아시아나 직항 왕복 (OZ511 / OZ512)</span>
-      <span class="meta-tag">🏨 1차 숙소: H10 Universitat (3박·조식포함)</span>
-      <span class="meta-tag">🏢 2차 숙소: Apartments Sixtyfour (4박)</span>
-      <span class="meta-tag">🚕 전 일정 택시 중심 이동 (FREE NOW + Cabify)</span>
-    </div>
+  <div class="header-badge">BARCELONA FAMILY TRIP</div>
+  <h1>🇪🇸 바르셀로나 가족여행 동선 가이드북</h1>
+  <div class="header-meta">
+    <span>🗓️ 12/4(금)~12/12(토) [7박9일]</span>
+    <span>👨‍👩‍👧‍👧 가족 4인(부모2, 초6 쌍둥이2)</span>
+    <span>🏨 H10 (3박) + Sixtyfour (4박)</span>
   </div>
 </header>
 
-<!-- Top Master Dashboard Section (예약내역 · 여행운영 · 필수준비물) -->
-<section class="top-dashboard-section">
-  <div class="top-dashboard-wrapper">
-    <div class="dash-top-bar">
-      <div class="dash-main-title">
-        <span>🌟 여행 핵심 브리핑 & 실전 대시보드</span>
-        <span style="font-size:12px;font-weight:normal;color:#64748b;">(Gmail · 구글 드라이브 · Keep 전수 검증 완료)</span>
-      </div>
-      <button id="toggleDashBtn" onclick="toggleDashboard()" class="dash-toggle-btn">
-        📋 대시보드 접기 🔼
-      </button>
-    </div>
+<!-- Quick Action Link Bar -->
+<div class="quick-links-bar">
+  <a href="https://docs.google.com/spreadsheets/d/1-9xeBNnH7XYricgwkegfPDC55tZk5rihjWDAVYDCX0s/edit" target="_blank" class="quick-btn primary">
+    📊 구글시트 일정표
+  </a>
+  <a href="https://drive.google.com/file/d/1UpzRczGNhGivFd5I2yjW_et6lO3RFFLU/view" target="_blank" class="quick-btn">
+    🎨 일자별 동선 PDF
+  </a>
+  <a href="https://drive.google.com/drive/folders/1QECFVkMN6_3iM2S-elT0eDnFAz5BQYMs" target="_blank" class="quick-btn">
+    📂 드라이브 폴더
+  </a>
+</div>
 
-    <div class="dash-grid" id="dashboardGrid">
-
-      <!-- Card 1: 핵심 예약 확정 내역 -->
-      <div class="dash-card card-booking">
-        <div class="dash-card-header">
-          <div class="dash-card-title">
-            <span>🎫</span>
-            <span>핵심 예약 확정 내역</span>
-          </div>
-          <span class="dash-badge badge-green">🟢 100% 예약·결제 완료</span>
-        </div>
-        <ul class="dash-list">
-          <li class="dash-item">
-            <span class="dash-item-icon">⛪</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">사그라다 파밀리아 내부 & 탄생의 탑</span>
-              <span class="dash-tag highlight">예약번호 107954050</span>
-              <div class="dash-item-desc">12/10(목) 14:30 성당 내부 + 15:00 탄생의 파사드 탑 등반 (4인 140€ 결제 완료 | 공식 앱 오디오가이드 & 여권 필수)</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🦎</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title"><a href="https://www.myrealtrip.com/reservations/EXP-20261011-00010137" target="_blank" style="color:inherit;">인디고트래블 가우디 반일 투어</a></span>
-              <span class="dash-tag highlight">EXP-20261011-00010137</span>
-              <div class="dash-item-desc">12/8(화) 07:45~13:20 (숙소 맞은편 GEOX 앞) | <strong>★입장권 대행 확정</strong> (구엘 18€·바뜨요 성인 23€ 대행 / <strong>만 12세 이하 어린이 바뜨요 무료티켓</strong> — 마이리얼트립 메시지 등록 필수!)</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🎶</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title"><a href="https://maps.google.com/?q=Palau+de+la+Musica+Catalana" target="_blank" style="color:inherit;">카탈루냐 음악당 가이드 투어</a></span>
-              <span class="dash-tag highlight">12/7(월) 10:30 변경 예정</span>
-              <div class="dash-item-desc">예약번호 <code>102911658</code> (4인 76€ 결제완료) | 12/5(토) 캄 노우 축구 시간 중복 방지 및 오전 채광 골든타임을 위해 <strong>12/7(월) 10:30~11:00 슬롯으로 1회 변경 예정</strong> (★방문 24시간 전까지 확인 이메일 링크로 1회만 변경 가능 · 11월 경기 시간 공식 확정 시 변경 진행, Tasks 등록완료)</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">⚽</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">FC 바르셀로나 vs 셀타 비고</span>
-              <span class="dash-tag highlight">예매번호 CXWD7CW8W2NJ</span>
-              <div class="dash-item-desc">Spotify Camp Nou | 2nd Grandstand Lower (4인 결제 완료, 11월 킥오프 공식 시간 확정 대기)</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🎨</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title"><a href="https://tickets.museupicassobcn.cat:4443/muslinkIV/index.jsp?nom_cache=PICASSO&property=PICASSO&lang=3" target="_blank" style="color:inherit;">피카소 미술관 (첫째 주 일요일 무료 관람)</a></span>
-              <span class="dash-tag highlight">12/2 18:00 오픈런</span>
-              <div class="dash-item-desc">12/6(일) 11:00 입장 | 첫째 일요일 전관 무료 개방 (방문 4일 전인 <strong>12/2 수 18:00 KST</strong> 공식 사이트 4인 0€ 사전예약 필수 · Tasks 알림 등록 완료)</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">⛰️</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title"><a href="https://experiences.myrealtrip.com/products/3517344" target="_blank" style="color:inherit;">노마드벤츠 몬세라트 & 올리브농장 투어</a></span>
-              <span class="dash-tag highlight">EXP-20261018-00004835</span>
-              <div class="dash-item-desc">12/9(수) <strong>07:40 미팅 / 07:50 출발</strong> (만다린 앞, Sixtyfour 도보 2분) | 옵션B 4인 514,128원 예약완료 | <strong>★카톡ID & 몬세라트 입장권(성당 9€·검은성모 13€) 신청 여부</strong> 메시지 전달 필수 (올리브농장 50€/인 별도)</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🏨</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">숙소 2곳 (H10 & Sixtyfour)</span>
-              <span class="dash-tag">예약·결제 완료</span>
-              <div class="dash-item-desc">
-                • <strong>H10 Universitat (12/4~7, 3박):</strong> <code>3103-E30FAF28C014</code> | 조식포함 928.60€ 완납, 가습기 요청완료 (★만 17세 미만 자녀 2명 시티택스 면제)<br>
-                • <strong>Apartments Sixtyfour (12/7~11, 4박):</strong> <code>248629</code> (Pin <code>2660</code>) | 2베드룸 1,490.48€ (시티택스 포함, 무료취소 가능)
-              </div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🚗</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title"><a href="https://valet.amanopark.co.kr/?modal=booking&bookingUid=89888867" target="_blank" style="color:inherit;">인천공항 T2 공식 발렛 (아마노코리아)</a></span>
-              <span class="dash-tag">예약번호 89888867</span>
-              <div class="dash-item-desc">차량 <code>32라2418</code> | 12/4(금) 08:30 T2 지하 1층 인도 ~ 12/12(토) 18:20 출차</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">📱</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">KT 함께 쓰는 로밍 20GB</span>
-              <span class="dash-tag highlight">대표+가족 등록완료</span>
-              <div class="dash-item-desc">대표회선 가입(66,000원, 장기고객 3천원 할인쿠폰) + <strong>가족 서브회선 전원 등록 완료</strong> (12/4 00:00 자동 개시)</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🛡️</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">해외 여행자보험 (2중 보장 완료)</span>
-              <span class="dash-tag highlight">4인 증권 발급완료</span>
-              <div class="dash-item-desc">카카오페이손보 4인 가입 완료(김인선·류지혜·김상아·김승아 각 증권 보유) + 마스터월드 무료보험(<code>0260180634</code>) 백업</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Card 2: 여행 전반 운영 & 체력 밸런스 -->
-      <div class="dash-card card-routine">
-        <div class="dash-card-header">
-          <div class="dash-card-title">
-            <span>🧭</span>
-            <span>여행 전반 운영 & 택시 이동 원칙</span>
-          </div>
-          <span class="dash-badge badge-orange">👨‍👩‍👧‍👧 가족 맞춤 원칙</span>
-        </div>
-        <ul class="dash-list">
-          <li class="dash-item">
-            <span class="dash-item-icon">🚕</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">전 일정 택시 중심 이동 & 공항 대형 밴(XL) 필수 원칙</span>
-              <div class="dash-item-desc">
-                • <strong>시내 이동:</strong> 버스·지하철 대신 <strong>1순위 FREE NOW 앱(공식 노란택시 1만 대 배차) + 2순위 Cabify(정액제) + 길거리 초록불(Lliure) 택시</strong>로 이동 (우버 One 비가입 확정).<br>
-                • <strong>공항 ↔ 시내 이동 (필수):</strong> 4인 가족 + 대형 2개 + 기내용 2개(총 4개)는 일반 세단 적재 불가로 <strong>대형 밴/미니밴(Monovolumen / XL)</strong> 필수 탑승! T1 지하 1층 승강장 안내원에게 <em>"Cuatro personas, cuatro maletas (4명, 가방 4개)"</em> 요청 시 즉시 배차 (짐 수수료 무료, 공항할증 4.50€ 포함 약 35~42€). 귀국일(Day 8)은 Sixtyfour 리셉션에 대형 밴 사전 예약 요청 또는 FREE NOW [Taxi XL] 호출!
-              </div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🛒</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">일요일·공휴일(12/6, 12/8) 연중무휴 마트 & 한인마트</span>
-              <div class="dash-item-desc">
-                일요일·공휴일에는 메르카도나 등 대형마트가 휴무입니다. Sixtyfour 숙소 도보 2분 거리의 <strong><a href="https://maps.google.com/?q=Supercor+Expres+Carrer+Arago+308+Barcelona" target="_blank">Supercor Exprés (Aragó 308)</a></strong>(07:00~익일 01:00, <strong>365일 연중무휴 오픈!</strong>)과 <strong><a href="https://maps.google.com/?q=Tomato+Asian+Market+Carrer+Arago+284+Barcelona" target="_blank">Tomato Asian Market (Aragó 284)</a></strong>(한국 라면·햇반·김치, 일요일·공휴일 오픈!)을 활용하세요.
-              </div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🚶</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">동선 최적화 & 체력 분산 황금 공식</span>
-              <div class="dash-item-desc">
-                • <strong>Day 3(일):</strong> 축구 직관 다음 날 아침 늦잠·조식 후 첫째 주 일요일 무료 <strong>피카소 미술관(11:00) ➔ 해변 Maná 75 빠에야 ➔ 코스모카이샤 과학관</strong><br>
-                • <strong>Day 4(월):</strong> Day 5 투어와 겹치는 바뜨요 내부 관람 대신 <strong>그라시아 10대 쇼핑 & 호프만 디저트</strong>로 변경<br>
-                • <strong>Day 6(수):</strong> 4인 예약완료 <strong>몬세라트 & 올리브농장 투어(07:40 미팅 / 07:50 출발, 숙소 도보 2분) ➔ 시내 복귀 & 전망/휴식</strong><br>
-                • <strong>Day 7(목):</strong> 사그라다 내부·탑 등반 후 맞은편 <strong>셀코텔 루프탑(11/25 08:00 오픈런)</strong> 직행
-              </div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🍽️</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">식당 영수증 & 주문 실전 노하우</span>
-              <div class="dash-item-desc">주문 시 <em>"Poco sal, por favor (소금 적게)"</em> 필수 요청! 결제 전 영수증에서 <strong>시키지 않은 빵값(Pan) 청구 여부 및 야외 테라스 할증(Suplemento terraza 10~15%)</strong>을 꼭 확인하세요.</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">📑</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">스페인 무제한 택스리펀 & 현장 서류 검수</span>
-              <div class="dash-item-desc">스페인은 최소 구매 금액 제한 없이 1유로만 사도 택스리펀 가능! 매장에서 리펀 서류 수령 즉시 <strong>여권번호·영문 성명 오기재 여부</strong>를 현장에서 반드시 확인하세요 (오기재 시 공항 DIVA 스캔 불가).</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Card 3: 필수 준비물 & 패킹 체크리스트 -->
-      <div class="dash-card card-packing">
-        <div class="dash-card-header">
-          <div class="dash-card-title">
-            <span>🎒</span>
-            <span>필수 준비물 & 마트 쇼핑 리스트</span>
-          </div>
-          <span class="dash-badge badge-blue">Keep & 드라이브 연동</span>
-        </div>
-        <ul class="dash-list">
-          <li class="dash-item">
-            <span class="dash-item-icon">🎧</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">3.5mm 유선 이어폰 4개 & 앱 사전 설치</span>
-              <div class="dash-item-desc">가우디 반일투어 및 몬세라트 투어 수신기용 <strong>3.5mm 일반 유선 이어폰 4개</strong> 필수! 사그라다 파밀리아 및 카탈루냐 음악당 오디오가이드용 스마트폰 이어폰(C타입/젠더)도 함께 챙기세요.</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🔌</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">전기장판 · 멀티탭 · 멀티어댑터 · 드라이어 · 슬리퍼</span>
-              <div class="dash-item-desc">Keep 메모 핵심 준비물: <strong>전기장판, 멀티탭, 멀티어댑터, 휴대용 드라이어, 실내 슬리퍼 4켤레, 자물쇠(캐리어/백팩용), 엄마 & 상아·승아 선글라스</strong> 완벽 패킹!</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🍜</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">불닭볶음면 · 일회용젓가락 · 한식 홈쿡팩</span>
-              <div class="dash-item-desc">초6 쌍둥이 최애 <strong>불닭볶음면, 일회용 나무젓가락, 튜브형 볶음고추장, 햇반, 김</strong> 준비 (Sixtyfour 풀키친 인덕션·냄비 완비).</div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">🍷</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">드라이브 저장 스페인 와인 & 올리브유 픽</span>
-              <div class="dash-item-desc">
-                • <strong>추천 와인 3종:</strong> <code>The Golden Stallion Monastrell Organic 2024</code>, <code>Costalara Pagos Anguix 2019 (Ribera del Duero)</code>, <code>Mar de Frades (파란병 화이트 17.45€)</code><br>
-                • <strong>올리브유:</strong> <code>Oro Bailén Arbequina 500ml (13.90€, 검은병 연두색 뚜껑)</code>
-              </div>
-            </div>
-          </li>
-          <li class="dash-item">
-            <span class="dash-item-icon">💳</span>
-            <div class="dash-item-body">
-              <span class="dash-item-title">T2 마티나 골드 라운지 & 스카이패스 4인</span>
-              <div class="dash-item-desc">
-                • <strong>라운지 입장:</strong> 본인+동반1인(PP디지털 2회) + 가족카드 마스터월드 1회 + 1인 유료결제<br>
-                • <strong>스카이패스:</strong> 류지혜(<code>115028485641</code>), 김인선(<code>113218267156</code>), 김상아(<code>120421439200</code>), 김승아(<code>120421439232</code>)
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Sticky Navigation -->
+<!-- Sticky Day Selector -->
 <nav class="sticky-nav">
-  <div class="nav-scroll">
-    <button class="nav-tab active" onclick="filterDay('all', this)">🌐 전체 9일 보기</button>
-    <button class="nav-tab" onclick="filterDay('day1', this)">Day 1 (12/4 금)</button>
-    <button class="nav-tab" onclick="filterDay('day2', this)">Day 2 (12/5 토)</button>
-    <button class="nav-tab" onclick="filterDay('day3', this)">Day 3 (12/6 일)</button>
-    <button class="nav-tab" onclick="filterDay('day4', this)">Day 4 (12/7 월)</button>
-    <button class="nav-tab" onclick="filterDay('day5', this)">Day 5 (12/8 화)</button>
-    <button class="nav-tab" onclick="filterDay('day6', this)">Day 6 (12/9 수)</button>
-    <button class="nav-tab" onclick="filterDay('day7', this)">Day 7 (12/10 목)</button>
-    <button class="nav-tab" onclick="filterDay('day8', this)">Day 8 (12/11 금)</button>
-    <button class="nav-tab" onclick="filterDay('day9', this)">Day 9 (12/12 토)</button>
+  <div class="nav-scroll" id="navTabs">
+    <button class="nav-tab active" onclick="switchDay('all', this)">전체보기</button>
+    <button class="nav-tab" onclick="switchDay('day1', this)">D1 12/4(금)</button>
+    <button class="nav-tab" onclick="switchDay('day2', this)">D2 12/5(토)</button>
+    <button class="nav-tab" onclick="switchDay('day3', this)">D3 12/6(일)</button>
+    <button class="nav-tab" onclick="switchDay('day4', this)">D4 12/7(월)</button>
+    <button class="nav-tab" onclick="switchDay('day5', this)">D5 12/8(화)</button>
+    <button class="nav-tab" onclick="switchDay('day6', this)">D6 12/9(수)</button>
+    <button class="nav-tab" onclick="switchDay('day7', this)">D7 12/10(목)</button>
+    <button class="nav-tab" onclick="switchDay('day8', this)">D8 12/11(금)</button>
+    <button class="nav-tab" onclick="switchDay('day9', this)">D9 12/12(토)</button>
   </div>
 </nav>
 
-<!-- Main Body -->
+<!-- Collapsible Master Dashboard (Default Closed on Mobile) -->
+<div class="dashboard-accordion">
+  <div class="dash-toggle-header" onclick="toggleDash()">
+    <span>📋 예약 확정 내역 & 여행 실전 팁 (터치하여 펼치기)</span>
+    <span id="dashIcon">🔽</span>
+  </div>
+  <div class="dash-body" id="dashBody">
+    <div class="dash-sec-title">🎫 핵심 확정 예약 번호</div>
+    <ul class="dash-bullets">
+      <li><strong>사그라다 파밀리아:</strong> 12/10 14:30 내부+15:00 탄생의 탑 (예약번호 <code>107954050</code>, 140€ 완납, 공식앱 오디오가이드 & 여권 필수)</li>
+      <li><strong>가우디 반일투어:</strong> 12/8 07:45 미팅 (<code>EXP-20261011-00010137</code>, 구엘18€·바뜨요23€ 대행 / 만12세이하 바뜨요 무료티켓 신청필수)</li>
+      <li><strong>몬세라트&올리브:</strong> 12/9 07:40 미팅 (<code>EXP-20261018-00004835</code>, 만다린 앞 도보 2분 / 농장 50€×4인 현장지불)</li>
+      <li><strong>음악당 투어:</strong> 12/7 10:30 슬롯 1회 변경 예정 (예약번호 <code>102911658</code>, 76€ 완납 / 11월 경기시간 확정 후 링크 변경)</li>
+      <li><strong>캄 노우 직관:</strong> 12/5 2nd Grandstand Lower 4인 (<code>CXWD7CW8W2NJ</code>, 공식 킥오프 대기)</li>
+      <li><strong>피카소 미술관:</strong> 12/6 11:00 첫째 일요일 무료 (12/2 18:00 KST 공홈 4인 0€ 사전예약 필수)</li>
+      <li><strong>T2 발렛:</strong> 아마노코리아 예약번호 <code>89888867</code> (차량 32라2418, 12/4 08:30 T2 지하1층 접수)</li>
+    </ul>
+
+    <div class="dash-sec-title">🚕 택시 & 이동 원칙</div>
+    <ul class="dash-bullets">
+      <li><strong>공항↔시내:</strong> 짐 4개(대형2+기내2)로 <strong>대형 밴(Minivan/XL) 필수!</strong> T1 승강장 안내원에게 <em>"Cuatro personas, cuatro maletas"</em> 요청 (짐 추가비 무료, 공항할증 포함 약 35~42€). 귀국일은 Sixtyfour 리셉션에 대형 밴 사전 예약 요청!</li>
+      <li><strong>시내 이동:</strong> 1순위 FREE NOW 앱(노란택시) + 2순위 길거리 초록불 택시 + Cabify.</li>
+      <li><strong>일요일/공휴일 마트:</strong> Sixtyfour 도보 2분 <strong>Supercor Exprés</strong>(Aragó 308, 연중무휴 07~01시) & <strong>Tomato 한인마트</strong>(Aragó 284) 활용.</li>
+      <li><strong>주문/결제 팁:</strong> 음식 주문 시 <em>"Poco sal, por favor (소금 적게)"</em> 필수! 영수증 빵값(Pan) 및 테라스 할증(10~15%) 확인.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Timeline Container -->
 <main>
-  <div class="view-controls">
-    <div class="section-heading">7박 9일 일자별 동선 카드 & 상세 가이드</div>
-    <div class="btn-group">
-      <a href="https://docs.google.com/spreadsheets/d/1-9xeBNnH7XYricgwkegfPDC55tZk5rihjWDAVYDCX0s/edit" target="_blank" class="btn btn-primary">
-        📊 스프레드시트 일정표 열기
-      </a>
-      <button onclick="window.print()" class="btn">
-        🖨️ 인쇄 / PDF 저장
-      </button>
+
+  <!-- Day 1 -->
+  <div class="day-card" data-day="day1">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 1</span>
+        <span class="day-date">12/4 (금)</span>
+      </div>
+      <h2 class="day-title">출국 ➔ 바르셀로나 입성</h2>
+      <div class="day-summary-pill">인천공항 T2 출국 ➔ 직항 14h ➔ BCN 대형 밴 택시 ➔ H10 호텔 체크인 & 가벼운 저녁</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🚗</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">자택 출발 ➔ T2 공식 발렛</span>
+              <span class="node-time">07:30~08:30</span>
+            </div>
+            <div class="node-desc">올림픽대로 경유 인천공항 T2 자차(32라2418) 이동 ➔ 단기주차장 지하 1층 발렛 접수장 차량 인도 (예약 <code>89888867</code>)</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 터미널 도보 3분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🛂</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">T2 수속 & 스마트패스 ➔ 마티나 라운지</span>
+              <span class="node-time">08:45~11:30</span>
+            </div>
+            <div class="node-desc">아시아나 카운터 수하물(4개) 위탁 ➔ 안면인식 출국 ➔ 249번 게이트 맞은편 4층 <strong>마티나 골드 라운지</strong> 아침 뷔페 식사</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">✈️ 직항 14시간 비행 (12:00 출발)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🛬</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">BCN T1 도착 ➔ 대형 밴(XL) 택시 탑승</span>
+              <span class="node-time">18:55~20:40</span>
+            </div>
+            <div class="node-desc">입국 심사 & 수하물 수령 ➔ 지하 1층 공식 승강장 이동 ➔ 안내원에게 <strong>"Cuatro personas, cuatro maletas"</strong> 요청 후 대형 밴 탑승 (약 35~42€)</div>
+            <span class="node-badge badge-alert">대형 밴(XL) 필수</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 택시 25분 이동</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🏨</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=H10+Universitat+Barcelona" target="_blank">H10 Universitat 호텔 체크인</a></span>
+              <span class="node-time">20:40~</span>
+            </div>
+            <div class="node-desc">예약 <code>3103-E30FAF28C014</code> (조식포함 완납, 만17세미만 자녀 2명 시티택스 면제) ➔ 백화점 지하 <a href="https://maps.google.com/?q=Supermercado+El+Corte+Ingles+Plaza+Catalunya" target="_blank">El Corte Inglés</a> 델리(도보 4분) 또는 <a href="https://maps.google.com/?q=Honest+Greens+Rambla+Catalunya" target="_blank">Honest Greens</a> 가벼운 저녁</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer-tip">
+      <span>💡</span>
+      <span>스페인 도착 즉시 KT 함께 쓰는 로밍(20GB, 가족 서브회선 전원 등록완료) 데이터 연결을 확인하세요.</span>
     </div>
   </div>
 
-  <div class="days-grid" id="daysContainer">
-
-    <!-- Day 1 -->
-    <div class="day-card" data-day="day1">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 1</span>
-          <span class="day-date">12/4 (금)</span>
-        </div>
-        <h3 class="day-title">출국 & 바르셀로나 입성</h3>
-        <p class="day-intro">
-          인천공항 T2 공식 발렛과 마티나 골드 라운지를 즐긴 후, 14시간 직항 비행으로 바르셀로나에 도착합니다. 공식 대형 택시로 편안하게 H10 호텔에 체크인합니다.
-        </p>
+  <!-- Day 2 -->
+  <div class="day-card" data-day="day2">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 2</span>
+        <span class="day-date">12/5 (토)</span>
       </div>
-
-      <div class="timeline-container">
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏠</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">자택 출발</span>
-                <span class="node-time">07:30</span>
-              </div>
-              <div class="node-detail">자택(삼성로 14)에서 올림픽대로 경유 인천공항 T2 자차 이동 (차량 32라2418)</div>
+      <h2 class="day-title">바르샤 유니폼 ➔ 보케리아 ➔ 성탄마켓 ➔ 캄 노우 직관</h2>
+      <div class="day-summary-pill">람블라 유니폼 마킹 ➔ 보케리아 과일주스 ➔ 대성당 크리스마스 마켓 ➔ 타파스 런치 ➔ 호텔 휴식 ➔ 캄 노우 축구 직관</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🍳</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">H10 조식 후 람블라 이동</span>
+              <span class="node-time">07:30~09:50</span>
             </div>
+            <div class="node-desc">호텔 조식 뷔페 든든히 식사 ➔ 람블라 거리 방면 도보 6분 이동</div>
           </div>
-
-          <div class="transit-step"><span class="transit-pill">🚗 자차 이동 60분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🅿️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://valet.amanopark.co.kr/?modal=booking&bookingUid=89888867" target="_blank">T2 공식 발렛 차량 인도</a></span>
-                <span class="node-time">08:30</span>
-              </div>
-              <div class="node-detail">단기주차장 지하 1층 공식 발렛 접수장 진입 및 차량 인도</div>
-              <span class="node-badge badge-confirmed">예약완료 (아마노코리아 89888867)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 터미널 도보 5분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🛂</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">T2 수속 & 스마트패스</span>
-                <span class="node-time">08:45</span>
-              </div>
-              <div class="node-detail">아시아나 카운터 수하물 위탁(가족 4개) ➔ 스마트패스 안면인식 출국장 신속 통과</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 3분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍽️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">마티나 골드 라운지 (T2 4층)</span>
-                <span class="node-time">09:30</span>
-              </div>
-              <div class="node-detail">249번 게이트 맞은편 4층. 본인+동반1인(PP디지털 2회) + 가족카드 마스터월드 1회 + 1인 유료 입장으로 든든한 뷔페 브런치</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 바로 앞 249번 게이트 (11:30 탑승)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">✈️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">아시아나 OZ511 비행</span>
-                <span class="node-time">12:00</span>
-              </div>
-              <div class="node-detail">인천 T2 출발 ➔ 바르셀로나 T1 도착 (직항 14시간 소요, 기내식 2회)</div>
-              <span class="node-badge badge-confirmed">좌석 확정 (A350)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🛬 BCN T1 도착 (18:55) ➔ 입국 심사 & 수하물 수령</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🚕</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">BCN T1 지하 1층 공식 승강장 ➔ 대형 밴(XL) 택시 탑승</span>
-                <span class="node-time">20:00~20:40</span>
-              </div>
-              <div class="node-detail">
-                <strong>★4인 가족 + 대형 2개 + 기내용 2개(총 4개) 수납 필수 가이드:</strong><br>
-                • <strong>일반 세단 불가:</strong> 4인 탑승 시 실내 좌석 적재 불가 & 세단 트렁크 공간 부족으로 <strong>대형 밴/미니밴(Monovolumen / XL)</strong> 필수 탑승!<br>
-                • <strong>현장 승강장 실전 요령:</strong> 입국장 나와서 바닥의 택시 표시를 따라 에스컬레이터 타고 <strong>지하 1층 공식 택시 승강장</strong>으로 이동 ➔ 줄 관리 안내원(Marshal)에게 <strong>"Cuatro personas, cuatro maletas (콰트로 페르소나스, 콰트로 말레타스 - 4명, 가방 4개)"</strong> 요청 시 대형 밴(벤츠 비토, 폭스바겐 등) 즉시 배차!<br>
-                • <strong>요금 규정:</strong> 캐리어 추가 요금 일절 없음(무료), 공항 기본 할증 4.50€ 포함 미터기 요금 <strong>약 35~42€</strong> 내외 (신용카드/트래블카드 결제 완비).
-              </div>
-              <span class="node-badge badge-alert">대형 밴(XL) 필수 / 승강장 안내원 요청</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 공식 대형 밴 택시 25분 (약 35~42€) ➔ H10 호텔 이동</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏨</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=H10+Universitat+Barcelona" target="_blank">H10 Universitat 호텔 체크인</a></span>
-                <span class="node-time">20:40</span>
-              </div>
-              <div class="node-detail">체크인(예약번호 <code>3103-E30FAF28C014</code>, 조식포함 928.60€ 선결제 완료, 가습기 요청 완료). <strong>만 17세 미만 초6 자녀 2명은 숙박세(City Tax) 면제</strong>이므로 성인 2인분만 결제!</div>
-              <span class="node-badge badge-confirmed">선결제 완료 (3103-E30FAF28C014)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 카탈루냐 광장 방면 도보 4분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍽️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Supermercado+El+Corte+Ingles+Plaza+Catalunya" target="_blank">첫날 저녁 식사 & 슈퍼마켓</a></span>
-                <span class="node-time">21:00</span>
-              </div>
-              <div class="node-detail">
-                • <strong>[옵션 1(추천 - 룸 다이닝)]</strong> <a href="https://maps.google.com/?q=Supermercado+El+Corte+Ingles+Plaza+Catalunya" target="_blank">Supermercado El Corte Inglés</a>(백화점 지하 식품관 도보 4분) 델리 코너에서 신선 샐러드, 샌드위치, 과일팩, 초밥, 생수 구매 후 객실에서 편안하게 식사.<br>
-                • <strong>[옵션 2(가벼운 외식)]</strong> 인근 <a href="https://maps.google.com/?q=Honest+Greens+Rambla+Catalunya" target="_blank">Honest Greens</a>(도보 4분, 그릴 치킨/따뜻한 보울) 또는 <a href="https://maps.google.com/?q=Ciudad+Condal+Barcelona" target="_blank">로컬 타파스 바</a>에서 판콘토마테 & 오믈렛 가벼운 외식.
-              </div>
-              <span class="node-badge badge-recommended">식품관 델리 or 캐주얼 외식</span>
-            </div>
-          </div>
-
         </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>공항 대형 밴 택시 실전 팁:</strong> 4인 가족에 대형 캐리어 2개+기내용 2개(총 4개)는 일반 세단 택시 트렁크에 절대 다 들어가지 않습니다. T1 지하 1층 공식 승강장 안내원에게 <strong>"Cuatro personas, cuatro maletas"</strong>라고 말씀하시면 대기 중인 대형 밴 택시를 바로 앞으로 불러줍니다 (짐 추가 요금 무료, 미터기 약 35~42€).
+        <div class="transit-divider"><span class="transit-pill">🚶 도보 6분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">⚽</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Barca+Store+Canaletes+Barcelona" target="_blank">Barça Store Canaletes 유니폼 마킹</a></span>
+              <span class="node-time">10:00~10:40</span>
+            </div>
+            <div class="node-desc">10:00 오픈런! 공식 홈 유니폼 구매 후 쌍둥이 즉석 마킹 (약 20분 소요, 여권 지참 시 즉시 택스리펀 서류 발급)</div>
+            <span class="node-badge badge-plan">오픈런 추천</span>
+          </div>
         </div>
-        <div class="alert-box">
-          ⚠️ <strong>필수 체크:</strong> 스페인 도착 즉시 KT 함께 쓰는 로밍 20GB(대표+가족 서브회선 등록 완료) 데이터 연결 확인!
+        <div class="transit-divider"><span class="transit-pill">🚶 람블라 남쪽 도보 5분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🍊</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Mercat+de+la+Boqueria" target="_blank">라 보케리아 시장 (Mercat de la Boqueria)</a></span>
+              <span class="node-time">10:45~11:20</span>
+            </div>
+            <div class="node-desc">H10 도보 9분! 활기찬 토요일 아침 시장. 시원한 100% 생과일 주스(1.5~2€), 컵과일, 즉석 하몬 콘 맛보기 (★일요일 휴무이므로 오늘 방문 최적)</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 고딕 지구 도보 6분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🎄</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Catedral+de+Barcelona+Pla+de+la+Seu" target="_blank">대성당 & 산타 루시아 크리스마스 마켓</a></span>
+              <span class="node-time">11:30~12:15</span>
+            </div>
+            <div class="node-desc">240년 전통 피라 데 산타 루시아 마켓 탐방. '선물 주는 통나무(티오)'와 '배변 인형(카가네르)' 구경 & 비스베 다리 포토타임</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 도보 5분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🍽️</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Ciudad+Condal+Barcelona" target="_blank">Ciudad Condal 점심 ➔ H10 휴식</a></span>
+              <span class="node-time">12:15~16:00</span>
+            </div>
+            <div class="node-desc">인생 타파스(꿀대구, 맛조개, 안심 핀초스) 만찬 ➔ <a href="https://maps.google.com/?q=Jon+Cake+Barcelona" target="_blank">Jon Cake</a> 치즈케이크 포장 ➔ 호텔에서 쉬며 캄 노우 경기 컨디션 충전</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 FREE NOW 택시 15~20분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🏟️</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Spotify+Camp+Nou" target="_blank">Spotify Camp Nou 라리가 직관</a></span>
+              <span class="node-time">18:30~21:00</span>
+            </div>
+            <div class="node-desc">
+              • FC 바르셀로나 vs 셀타 비고 (예매 <code>CXWD7CW8W2NJ</code>, 2nd Grandstand Lower 4인 연석)<br>
+              • <strong>박물관 안내:</strong> 일반 경기 티켓에 박물관(28€~) 미포함이며 경기 당일 조기 마감되므로, 오늘은 <strong>축구 직관에만 100% 집중!</strong>
+            </div>
+            <span class="node-badge badge-done">예매완료 (CXWD7CW8W2NJ)</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 경기 후 귀가 전략 (도보 8분 이동)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🚕</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Grand+Hyatt+Barcelona" target="_blank">Grand Hyatt 로비 승강장 ➔ 호텔 복귀</a></span>
+              <span class="node-time">21:00~21:40</span>
+            </div>
+            <div class="node-desc">북측 출구 ➔ 도보 8분(750m) <strong>Grand Hyatt Barcelona 로비</strong> 도착. 따뜻하게 대기하며 컨시어지 앞 택시 승강장 탑승 ➔ H10 호텔 안전 복귀</div>
+            <span class="node-badge badge-plan">추천 택시 거점</span>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Day 2 -->
-    <div class="day-card" data-day="day2">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 2</span>
-          <span class="day-date">12/5 (토)</span>
-        </div>
-        <h3 class="day-title">바르샤 유니폼 & 보케리아 시장 & 크리스마스 마켓 & 캄 노우 직관</h3>
-        <p class="day-intro">
-          숙소 H10 도보권인 람블라 스토어에서 공식 유니폼 즉석 마킹 후, 바로 옆 활기찬 <strong>보케리아 시장</strong>(과일주스·하몬)과 대성당 크리스마스 마켓을 여유롭게 즐깁니다. 타파스 런치 후 호텔에서 컨디션을 조절해 캄 노우 축구 직관에 집중합니다.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍳</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">H10 호텔 조식 (포함)</span>
-                <span class="node-time">07:30</span>
-              </div>
-              <div class="node-detail">스페인식 오믈렛, 하몬, 갓 짠 오렌지주스 & 에스프레소로 에너지 충전</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 람블라 거리 도보 6분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">⚽</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Barca+Store+Canaletes+Barcelona" target="_blank">Barça Store Canaletes</a></span>
-                <span class="node-time">10:00</span>
-              </div>
-              <div class="node-detail">10:00 오픈런! 공식 홈 유니폼 구매 후 쌍둥이 자녀 즉석 마킹 (약 20분, 여권 지참 시 즉시 택스리펀 서류 발급)</div>
-              <span class="node-badge badge-recommended">오픈런 추천</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 람블라 거리 남쪽 도보 5분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍊</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Mercat+de+la+Boqueria" target="_blank">[동선 최적화] 라 보케리아 시장 (Mercat de la Boqueria)</a></span>
-                <span class="node-time">10:45</span>
-              </div>
-              <div class="node-detail">
-                H10 숙소 도보 9분 거리! 활기찬 토요일 오전 시장의 생동감 체험. 시원한 100% 생과일 주스(1.5~2€), 컵과일, 즉석 하몬 콘을 맛보며 가볍게 간식 타임 (★일요일은 휴무이므로 토요일 방문이 최적!)
-              </div>
-              <span class="node-badge badge-recommended">H10 초근접 / 토요일 활기 만끽</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 고딕 지구 도보 6분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🎄</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Catedral+de+Barcelona+Pla+de+la+Seu" target="_blank">대성당 & 산타 루시아 크리스마스 마켓</a></span>
-                <span class="node-time">11:30</span>
-              </div>
-              <div class="node-detail">
-                바르셀로나 대성당 앞 광장(Pla de la Seu)의 240년 전통 <strong>피라 데 산타 루시아(Fira de Santa Llúcia)</strong> 크리스마스 마켓 탐방! 카탈루냐 명물 '선물 주는 통나무(Tió de Nadal)'와 '행운의 배변 인형(Caganer)' 구경 후 비스베 다리 산책
-              </div>
-              <span class="node-badge badge-recommended">피라 데 산타 루시아 마켓</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 5분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍽️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Ciudad+Condal+Barcelona" target="_blank">Ciudad Condal 든든한 점심</a></span>
-                <span class="node-time">12:00~13:30</span>
-              </div>
-              <div class="node-detail">바르셀로나 1위 타파스. 시그니처 꿀대구(Bacalao al alioli), 맛조개, 소고기 안심 핀초스로 여유로운 만찬 식사</div>
-              <span class="node-badge badge-recommended">타파스 명가</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 6분 ➔ H10 호텔 복귀</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🧀</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Jon+Cake+Barcelona" target="_blank">Jon Cake & 츄러스 포장 ➔ 호텔 휴식 & 경기 대기</a></span>
-                <span class="node-time">13:30~16:00</span>
-              </div>
-              <div class="node-detail">
-                • <strong>음악당 일정 이전:</strong> 캄 노우 경기 시간(오후 14:00/16:15 가능성) 중복 방지를 위해 카탈루냐 음악당은 <strong>12/7(월) 10:30 채광 골든타임</strong>으로 이전 반영되었습니다!<br>
-                • <strong>축구 완벽 대비:</strong> 보른 지구 Jon Cake 바스크 치즈케이크와 따끈한 츄러스를 포장해 호텔에서 쉬며 공식 킥오프 시간에 맞춰 여유 있게 캄 노우로 이동합니다.
-              </div>
-              <span class="node-badge badge-confirmed">음악당 12/7 월 이전 완료</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 FREE NOW / Cabify 택시 15~20분 (또는 메트로 L3)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏟️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Spotify+Camp+Nou" target="_blank">Spotify Camp Nou 직관</a></span>
-                <span class="node-time">18:30~21:00</span>
-              </div>
-              <div class="node-detail">
-                • <strong>라리가 홈경기 직관:</strong> FC 바르셀로나 vs 셀타 비고 (예매번호 <code>CXWD7CW8W2NJ</code>, 2nd Grandstand Lower 4인 연석, 10만 관중 열기)<br>
-                • <strong>FC 바르셀로나 박물관(Barça Immersive Tour) 공식 안내:</strong><br>
-                &nbsp;&nbsp;① <strong>티켓 별도 구매 필수:</strong> 일반 경기 티켓에는 박물관 입장이 미포함되어 별도 티켓(1인 28€~, 4인 가족 약 100~112€)을 구매해야 합니다.<br>
-                &nbsp;&nbsp;② <strong>스타디움 공사 현황:</strong> 캄 노우 전면 재건축(Espai Barça)으로 기존 라커룸/피치 투어는 운영하지 않으며, 임시 인터랙티브 박물관과 공사 현장 뷰포인트(Construction Viewpoint)로 운영 중입니다.<br>
-                &nbsp;&nbsp;③ <strong>경기 당일 제약:</strong> 경기 당일에는 킥오프 시간에 맞춰 박물관이 조기 마감되거나 인파 통제로 관람이 혼잡하므로, 토요일은 유니폼 마킹 + 보케리아 + 크리스마스 마켓 후 <strong>축구 직관 자체에만 집중</strong>하는 것이 체력과 가성비상 가장 좋습니다!
-              </div>
-              <span class="node-badge badge-confirmed">예매완료 (CXWD7CW8W2NJ)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 경기 후 택시 복귀 전략 (추천 3대 포인트)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🚕</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">경기 종료 후 택시 탑승 거점 이동</span>
-                <span class="node-time">21:00~21:40</span>
-              </div>
-              <div class="node-detail">
-                경기장 바로 앞(극심한 인파 &amp; 차량 통제)을 벗어나 안전하게 택시를 타는 3대 포인트:<br>
-                • <strong>[1순위 강력 추천 - Grand Hyatt 로비]</strong> 북측 출구(Joan XXIII) ➔ 도보 8분(750m) <a href="https://maps.google.com/?q=Grand+Hyatt+Barcelona" target="_blank">Grand Hyatt Barcelona</a>(Plaça de Pius XII, 4) 도착. 5성급 호텔 로비/라운지에서 따뜻하게 대기하며 컨시어지 앞 전용 택시 승강장 탑승 또는 FREE NOW 호출 (도로 정체 및 겨울밤 추위 완벽 회피!).<br>
-                • <strong>[2순위 - El Corte Inglés 승강장]</strong> 도보 15분(1.1km) <a href="https://maps.google.com/?q=El+Corte+Ingles+Diagonal+Barcelona" target="_blank">El Corte Inglés Diagonal</a> 측면(Carrer de Joan Güell, 213) 공식 택시 승강장 이용. 디아고날 본선의 극심한 정체를 피해 뒷골목(Joan Güell/Numància)으로 시내 진입 수월.<br>
-                • <strong>[3순위 - 디아고날 큰 대로변]</strong> 디아고날 대로 북쪽(시내 반대편 차선)에서 빈 택시(초록불) 포착 또는 FREE NOW 호출 (단, 본선 교통 정체 유의).
-              </div>
-              <span class="node-badge badge-recommended">1순위: Grand Hyatt 승강장</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 택시 이동 15분 ➔ H10 호텔 안전 복귀</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏨</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">H10 Universitat 호텔 도착 &amp; 휴식</span>
-                <span class="node-time">21:40~</span>
-              </div>
-              <div class="node-detail">택시로 안전하게 카탈루냐 광장 인근 H10 호텔 복귀. 따뜻한 샤워 및 휴식으로 Day 2 완주!</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>캄 노우 경기 후 택시 꿀팁:</strong> 경기 종료 직후 경기장 바로 앞은 차량 통제로 택시 진입이 불가능합니다. 북측 출구에서 도보 8분 거리의 <strong>Grand Hyatt Barcelona 로비 승강장(Pius XII)</strong>을 거점으로 삼아, 로비 라운지에서 15분간 따뜻하게 몸을 녹이고 화장실을 이용한 뒤 택시를 타는 것이 초6 쌍둥이 자녀 체력 안배에 가장 좋습니다.
-        </div>
-        <div class="alert-box">
-          ⚠️ <strong>체크:</strong> 고딕 지구 골목길 소매치기 주의(핸드폰 스트랩 필수). 라리가 경기 일정 확정에 맞춰 시간 변동 가능.
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 3 -->
-    <div class="day-card" data-day="day3">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 3</span>
-          <span class="day-date">12/6 (일)</span>
-        </div>
-        <h3 class="day-title">[문화·미식·과학] 호텔 늦잠 & 피카소 미술관(무료) & 해변 빠에야 & 코스모카이샤</h3>
-        <p class="day-intro">
-          전날 밤 캄 노우 축구 직관의 피로를 풀기 위해 아침에는 H10 호텔에서 푹 자고 여유롭게 조식을 즐깁니다. 12월 첫째 주 일요일 무료 개방 혜택을 활용해 보른 지구 <strong>피카소 미술관</strong>을 관람한 뒤, 바르셀로네타 해변 <strong>Maná 75</strong>에서 정통 빠에야 런치를 먹고 오후에는 초6 쌍둥이 맞춤 <strong>코스모카이샤 과학관</strong>을 체험합니다.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <!-- Confirmed First Sunday Free Museum -->
-        <div class="highlight-card">
-          <h4>🎨 [첫째 주 일요일 무료 관람] 피카소 미술관 (12/2 18:00 KST 사전예약 필수)</h4>
-          <p>12월 6일은 12월의 첫 번째 일요일로 피카소 미술관 전관이 무료 개방됩니다. 현장 선착순 입장이 불가하므로 방문 4일 전인 <strong>12/2(수) 18:00 KST</strong>에 가족 4인 무료 티켓(0€)을 사전 예약하세요:</p>
-          <div class="highlight-links">
-            <a href="https://tickets.museupicassobcn.cat:4443/muslinkIV/index.jsp?nom_cache=PICASSO&property=PICASSO&lang=3" target="_blank" class="tour-btn">
-              🔗 피카소 미술관 공식 티켓 예매처 (12/2 18:00 오픈런)
-            </a>
-            <a href="https://museupicassobcn.cat/en" target="_blank" class="tour-btn" style="background:#0f172a;">
-              🏛️ 피카소 미술관 공식 홈페이지
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🛌</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">H10 Universitat 늦잠 & 여유로운 호텔 조식</span>
-                <span class="node-time">09:00~10:30</span>
-              </div>
-              <div class="node-detail">전날 밤 축구 직관 후 아침 일찍 일어날 필요 없이 충분한 수면 후 1층 레스토랑에서 여유로운 조식 뷔페 식사</div>
-              <span class="node-badge badge-confirmed">조식 포함 완납</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 FREE NOW 택시 7분 (또는 보른 골목 산책 도보 15분)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🎨</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Museu+Picasso+Barcelona" target="_blank">피카소 미술관 (Museu Picasso) 집중 관람</a></span>
-                <span class="node-time">11:00~12:45</span>
-              </div>
-              <div class="node-detail">
-                중세 귀족 저택 5채를 연결한 아름다운 미술관에서 피카소의 유년기 천재적 화풍과 대표 연작 <strong>'시녀들(Las Meninas)'</strong> 감상.<br>
-                • <strong>관람 꿀팁:</strong> 11시 이후 단체가 몰리므로 입장 직후 <strong>12번 전시실(시녀들 연작)</strong>부터 먼저 보고 역순으로 내려오면 훨씬 쾌적하게 관람할 수 있습니다!
-              </div>
-              <span class="node-badge badge-recommended">첫째 일요일 무료 (사전예약)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 보른 지구 산타 마리아 델 마르 성당 경유 ➔ 🚕 택시 10분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🥘</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Mana+75+Barcelona" target="_blank">Maná 75 바르셀로네타 해변 빠에야 런치</a></span>
-                <span class="node-time">13:30~15:00</span>
-              </div>
-              <div class="node-detail">오픈 키친에서 갓 구워내는 바르셀로나 최고 해산물 빠에야 & 먹물 빠에야 런치 (주문 시 <strong>"Poco sal, por favor (소금 적게)"</strong> 필수 요청!)</div>
-              <span class="node-badge badge-alert">Poco sal 필수</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🏖️ 바르셀로네타 해변 산책 후 ➔ 🚕 택시 20분 (북부 과학관 이동)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🔬</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=CosmoCaixa+Barcelona" target="_blank">코스모카이샤 (CosmoCaixa) 대형 과학관</a></span>
-                <span class="node-time">15:30~18:00</span>
-              </div>
-              <div class="node-detail">일요일 10:00~20:00 정상 운영! 1,000㎡ 아마존 침수 열대우림 거대 수조관(카피바라, 대형 피라루쿠)과 직접 만지고 체험하는 물리·우주 전시장 관람</div>
-              <span class="node-badge badge-recommended">초6 쌍둥이 만족도 1위</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 택시 15분 ➔ H10 호텔 복귀</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏨</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">H10 호텔 복귀 & 저녁 식사 / 휴식</span>
-                <span class="node-time">18:30~21:00</span>
-              </div>
-              <div class="node-detail">카탈루냐 광장 인근 레스토랑 저녁 식사 후 내일 숙소 이동(Sixtyfour)을 위해 가볍게 짐 정리 및 휴식</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>일정 변경 시너지:</strong> 축구 직관 다음 날 아침 07:15 외곽 투어 기상 부담을 없애고, 첫째 주 일요일 무료 미술관 혜택과 해변 빠에야·과학관을 결합해 가족 체력과 만족도를 동시에 잡았습니다!
-        </div>
-        <div class="alert-box">
-          ⚠️ <strong>체크:</strong> 12/2(수) 오후 6시(18:00 KST) Google Tasks 알림이 울리면 피카소 미술관 11:00 슬롯 4인 무료 예약을 진행하세요.
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 4 -->
-    <div class="day-card" data-day="day4">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 4</span>
-          <span class="day-date">12/7 (월)</span>
-        </div>
-        <h3 class="day-title">숙소 이동 & 카탈루냐 음악당(채광 골든타임) & 그라시아 쇼핑·디저트 & 마트 홈쿡</h3>
-        <p class="day-intro">
-          취사가 가능한 Sixtyfour 레지던스에 짐을 맡긴 뒤, 하루 중 스테인드글라스 황금빛 채광이 가장 쏟아져 내리는 10:30에 카탈루냐 음악당을 집중 관람합니다. 도보 7분 거리 El Nacional에서 점심을 먹고 그라시아 10대 쇼핑과 호프만 디저트를 즐긴 뒤 메르카도나 장보기 & 홈쿡 파티로 이어집니다.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-
-        <!-- Residence Alternative Comparison -->
-        <div class="residence-box">
-          <strong>🏢 2차 숙소 체크포인트:</strong><br>
-          • <strong>Apartments Sixtyfour (예약번호 248629 / Pin 2660):</strong> 현재 예약완료 (카사 바트요 맞은편, Sixtytwo 호텔 연계 24시간 리셉션, 1,490.48€ 시티택스 포함)<br>
-          • <strong>대안 후보 Suites Avenue:</strong> 그라시아 거리 카사 밀라 정면, 야외 테라스 풀 & 주방 완비 (취소가능요금 모니터링 중)
-        </div>
-
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🧳</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">H10 체크아웃 & Sixtyfour 짐 보관</span>
-                <span class="node-time">10:00</span>
-              </div>
-              <div class="node-detail">H10 Universitat 체크아웃 ➔ 택시 5분 ➔ Apartments Sixtyfour 리셉션에 수하물 사전 보관</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 택시 5분 (또는 카탈루냐 광장 방향 도보 12분)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🎵</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Palau+de+la+Musica+Catalana" target="_blank">[일정 이전] 카탈루냐 음악당 집중 관람 (채광 골든타임)</a></span>
-                <span class="node-time">10:30~11:30</span>
-              </div>
-              <div class="node-detail">
-                • <strong>스테인드글라스 황금빛 채광 골든타임:</strong> 천장 중앙의 역돔 스테인드글라스(Claraboya)로 자연광이 수직 관통하여 2,000여 개 도자기 장미 천장을 찬란하게 비추는 하루 중 최고의 시간대(10:00~12:30)!<br>
-                • <strong>관람 & 인증샷:</strong> 한국어 오디오가이드 관람 및 2층 야외 테라스 모자이크 꽃기둥 가족 인증샷 촬영.<br>
-                • <strong>예약 현황:</strong> 예약번호 <code>102911658</code> (4인 76€ 결제완료) ➔ 11월 캄 노우 경기 시간 공식 확정 시 확인 이메일 링크로 12/7(월) 10:30~11:00 슬롯 1회 변경 진행 (★방문 24시간 전까지 가능, Tasks 등록완료).
-              </div>
-              <span class="node-badge badge-alert">12/7 10:30 변경 예정 (Tasks 등록완료)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 7분 (음악당 ➔ El Nacional 초근접 직결!)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍽️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=El+Nacional+Barcelona" target="_blank">El Nacional 점심 식사</a></span>
-                <span class="node-time">11:45~13:00</span>
-              </div>
-              <div class="node-detail">음악당에서 도보 7분 거리! 스페인 최초의 멀티 가스트로노미 공간. 웅장한 아르데코 글래스 돔 아래 지중해식 해산물 & 그릴 요리 만찬</div>
-              <span class="node-badge badge-recommended">도보 7분 직결</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 3분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🛍️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Passeig+de+Gracia+Barcelona" target="_blank">그라시아 거리 쇼핑 & 가우디 외관 산책</a></span>
-                <span class="node-time">13:00~15:00</span>
-              </div>
-              <div class="node-detail">
-                초6 쌍둥이 여아 취향 저격 브랜드 쇼핑 & 가우디 건축(까사 바뜨요·까사 밀라) 외관 포토타임:<br>
-                • <strong>10대 & 패션 쇼핑:</strong> <a href="https://maps.google.com/?q=Subdued+Passeig+de+Gracia+Barcelona" target="_blank">Subdued</a>(유럽 10대 소녀 1위 브랜드), <a href="https://maps.google.com/?q=Bimba+y+Lola+Passeig+de+Gracia+Barcelona" target="_blank">Bimba y Lola</a>(스페인 디자이너 백·키링), <a href="https://maps.google.com/?q=Zara+Passeig+de+Gracia+Barcelona" target="_blank">Zara 플래그십</a>, <a href="https://maps.google.com/?q=Ale-Hop+Passeig+de+Gracia+Barcelona" target="_blank">Ale-Hop</a>(귀여운 소품샵).
-              </div>
-              <span class="node-badge badge-recommended">쇼핑 & 택스리펀 (여권 지참)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 5분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🥐</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Pastisseria+Hofmann+Barcelona" target="_blank">감성 디저트 & 카페 타임</a></span>
-                <span class="node-time">15:00~16:15</span>
-              </div>
-              <div class="node-detail">
-                쇼핑 후 달콤한 당 충전 휴식:<br>
-                • <strong>추천 픽:</strong> <a href="https://maps.google.com/?q=Pastisseria+Hofmann+Barcelona" target="_blank">호프만 베이커리(Pastisseria Hofmann)</a>의 전설적인 마스카포네 크루아상 또는 그라시아 로컬 맛집 <a href="https://maps.google.com/?q=Churreria+Trebol+Barcelona" target="_blank">추레리아 트레볼(Churreria Trébol)</a> 수제 츄러스 & 진한 핫초코!
-              </div>
-              <span class="node-badge badge-recommended">달콤한 당 충전</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 5분 (16:30 Sixtyfour 정식 입실)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🛒</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Mercadona+Carrer+del+Consell+de+Cent+366+Barcelona" target="_blank">메르카도나 (Mercadona) 장보기</a></span>
-                <span class="node-time">17:30</span>
-              </div>
-              <div class="node-detail">
-                이베리코 목살/등심(Secreto Ibérico), 100% 즉석 착즙 오렌지주스, 하몬, 납작복숭아 구매!<br>
-                • <strong>드라이브 저장 픽:</strong> 와인(<code>The Golden Stallion 2024</code>, <code>Costalara 2019</code>, <code>Mar de Frades 파란병 화이트 17.45€</code>) & 올리브유(<code>Oro Bailén Arbequina 500ml 13.90€</code>)
-              </div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 8분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🥩</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">아파트 홈쿡 패밀리 디너</span>
-                <span class="node-time">19:00</span>
-              </div>
-              <div class="node-detail">Sixtyfour 풀키친에서 이베리코 스테이크 굽기 + 한국에서 가져온 불닭볶음면·튜브고추장 곁들인 가족 홈파티!</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>가족 팁:</strong> 내일(12/8 화)은 스페인 공휴일(성모 무염시태 축일)로 메르카도나가 휴무이므로, 오늘 저녁에 이틀치 식재료와 간식을 든든하게 장봐 두세요!
-        </div>
-        <div class="alert-box">
-          ⚠️ <strong>체크:</strong> 쇼핑 시 발급받은 택스리펀 서류의 <strong>여권번호와 영문 이름</strong>이 정확한지 매장 계산대에서 즉시 검수하세요.
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 5 -->
-    <div class="day-card" data-day="day5">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 5</span>
-          <span class="day-date">12/8 (화)</span>
-        </div>
-        <h3 class="day-title">[가우디 투어] 인디고트래블 가우디 반일 투어 (확정) & 아파트 휴식</h3>
-        <p class="day-intro">
-          [스페인 공휴일] 숙소 Sixtyfour 맞은편 GEOX 매장 앞(도보 1분, Pg. de Gràcia 52)에서 07:45 미팅하여 까사 바뜨요 내부 관람, 까사 밀라, 구엘 공원을 최고급 전용 차량(버스/밴)으로 편안하게 관람합니다. 입장권은 투어사에서 일괄 대행 구매하며, 13:20 사그라다 파밀리아 외관 해설 후 공식 투어를 종료하고 택시로 숙소에 복귀해 푹 쉽니다.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <!-- Confirmed Gaudi Tour -->
-        <div class="highlight-card">
-          <h4>⭐ [예약 확정 투어] 인디고트래블 가우디 반일 투어 (4인 결제 · 입장권 대행 확정)</h4>
-          <p>
-            • <strong>예약번호:</strong> <code>EXP-20261011-00010137</code> (07:45~13:20, 전용 차량 이동)<br>
-            • <strong>입장권 대행 확정:</strong> 구엘공원(18€), 까사 바뜨요(성인 23€) 투어사 일괄 대행 구매 진행<br>
-            • <strong>★어린이 무료 혜택:</strong> 만 12세 이하 어린이(초6 쌍둥이 여아 2명)는 까사 바뜨요 무료 티켓이 제공되므로 마이리얼트립 메시지에 동반 자녀 나이를 꼭 남겨두세요!
-          </p>
-          <div class="highlight-links">
-            <a href="https://www.myrealtrip.com/reservations/EXP-20261011-00010137" target="_blank" class="tour-btn">
-              🎫 내 예약 상세 내역 보기 (EXP-20261011-00010137)
-            </a>
-            <a href="https://experiences.myrealtrip.com/products/3753839" target="_blank" class="tour-btn">
-              🔗 투어 상품 페이지 보기
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🚶</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">숙소 맞은편 GEOX 매장 앞 미팅</span>
-                <span class="node-time">07:45</span>
-              </div>
-              <div class="node-detail">Sixtyfour 아파트 바로 맞은편(도보 1분, Pg. de Gràcia 52) GEOX 앞 가이드 미팅. 정시 출발 (지각 시 중간 합류 불가, 07:40 도착 필수! 3.5mm 유선 이어폰 4개 지참)</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🏛️ 가이드 동반 내부 관람 (입장권 대행)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🐉</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">까사 바뜨요 내부 집중 관람</span>
-                <span class="node-time">08:00~09:15</span>
-              </div>
-              <div class="node-detail">가이드와 함께 까사 바뜨요 내부 입장 및 바닷속 환상 공간 인문학 해설 감상 (성인 23€ 대행 / 만 12세 이하 어린이 무료 티켓 적용)</div>
-              <span class="node-badge badge-confirmed">내부 입장 대행 확정</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 5분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🌊</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">까사 밀라 외관 해설</span>
-                <span class="node-time">09:20~09:50</span>
-              </div>
-              <div class="node-detail">파도치는 석회암 곡선과 철제 발코니 난간의 예술적 가치 해설</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚌 전용 차량 이동 15분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🦎</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">구엘 공원 가이드 동반 내부 관람</span>
-                <span class="node-time">10:15~11:45</span>
-              </div>
-              <div class="node-detail">전용 버스로 정문 직행(오르막 도보 완전 회피!). 모자이크 도마뱀 분수, 파도의 회랑, 자연광장 해설 & 자유 포토타임</div>
-              <span class="node-badge badge-confirmed">구엘공원 입장 대행 확정</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚌 전용 차량 이동 15분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">⛪</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">사그라다 파밀리아 외관 심층 해설 & 투어 종료</span>
-                <span class="node-time">12:15~13:20</span>
-              </div>
-              <div class="node-detail">탄생의 파사드와 수난의 파사드 조각상 완벽 해설 ➔ 13:20 성당 앞에서 공식 투어 종료 (성당 내부는 12/10 목요일 14:30에 별도 관람!)</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🍽️ 도보 2분 ➔ 식사 후 🚕 택시 8분 복귀</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🥪</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">가우디 거리 로컬 점심 & 택시 복귀</span>
-                <span class="node-time">13:20~14:45</span>
-              </div>
-              <div class="node-detail">성당 앞 가우디 거리 테라스에서 점심 식사 후 <strong>FREE NOW / 길거리 택시(약 8분, 8~10€)</strong>로 Sixtyfour 아파트 쾌적 복귀</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🛋️ 오후 휴식 및 홈쿡</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🥩</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">아파트 낮잠 & 홈쿡 가족 디너</span>
-                <span class="node-time">15:00~20:00</span>
-              </div>
-              <div class="node-detail">오전 투어 후 숙소에서 다리 피로 회복 낮잠! 저녁은 아파트에서 여유롭게 홈쿡 만찬 (추가 장보기가 필요할 땐 도보 2분 연중무휴 <strong>Supercor Exprés</strong> 또는 한인마트 <strong>Tomato Asian Market</strong> 이용)</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>가족 팁:</strong> 사그라다 파밀리아 성당 내부는 12/10(목) 14:30에 이미 예매(107954050)되어 있으므로, 이날은 13:20 투어 종료 후 택시로 바로 숙소에 복귀해 푹 쉬는 것이 핵심입니다!
-        </div>
-        <div class="alert-box">
-          ⚠️ <strong>체크:</strong> 개인 유선 이어폰(3.5mm 일반 잭) 4개 필수 지참! 12/8(화) 공휴일에도 숙소 도보 2분 Supercor Exprés(07:00~01:00)는 정상 영업합니다.
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 6 -->
-    <div class="day-card" data-day="day6">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 6</span>
-          <span class="day-date">12/9 (수)</span>
-        </div>
-        <h3 class="day-title">[근교 투어 확정] 노마드벤츠 몬세라트·올리브농장 투어(옵션B) & 오후 힐링</h3>
-        <p class="day-intro">
-          수·토 정규 운영되는 <strong>노마드벤츠 몬세라트 & 올리브농장 투어(예약번호 EXP-20261018-00004835, 4인 완납)</strong>를 진행합니다. 평일(수요일) 기준 <strong>07:40 미팅 / 07:50 정시 출발</strong>이며, Sixtyfour 숙소에서 미팅 장소(만다린 오리엔탈 앞)까지 <strong>도보 단 2분 거리</strong>라 아침 이동이 매우 여유롭습니다!
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <!-- Confirmed Suburban Tour -->
-        <div class="highlight-card">
-          <h4>⭐ [예약 확정 투어] 노마드벤츠 몬세라트 & 올리브농장 이색오감 투어 (4인 예약완료)</h4>
-          <p>
-            • <strong>예약번호:</strong> <code>EXP-20261018-00004835</code> (옵션B: 몬세라트&올리브농장 / 4인 총 514,128원 결제 완료)<br>
-            • <strong>만나는 시간 (평일 수요일 기준):</strong> <strong>07:40 만남 / 07:50 정시 출발</strong> (*주말 07:30과 다름! 1~2분 지각 시 대기 없이 출발)<br>
-            • <strong>불포함 입장권 비용:</strong> 올리브농장 필수 입장권 <strong>50€/인(4인 200€)</strong>, 몬세라트 선택 입장권(성당 입장 <strong>9€</strong> / 검은 성모 보기 <strong>13€</strong>)<br>
-            • <strong>★필수 사전 조치:</strong> 마이리얼트립 대화창에 <strong>① 카톡 등록 가능한 연락처/아이디</strong> 및 <strong>② 몬세라트 선택 입장권 신청 여부</strong>를 꼭 남겨주세요! (투어 전날 오픈채팅방 링크 공유)
-          </p>
-          <div class="highlight-links">
-            <a href="https://experiences.myrealtrip.com/products/3517344" target="_blank" class="tour-btn">
-              🔗 투어 상품 페이지 보기 (3517344)
-            </a>
-            <a href="https://maps.app.goo.gl/GaoWi3bwrcGaoxhVA" target="_blank" class="tour-btn" style="background:#0f172a;color:#ffffff;border-color:#0f172a;">
-              📍 미팅 장소 구글맵 (만다린 오리엔탈 앞)
-            </a>
-          </div>
-        </div>
-
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🚶</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.app.goo.gl/GaoWi3bwrcGaoxhVA" target="_blank">Sixtyfour 출발 ➔ 만다린 오리엔탈 앞 미팅</a></span>
-                <span class="node-time">07:25~07:50</span>
-              </div>
-              <div class="node-detail">
-                Sixtyfour 아파트(Pg. de Gràcia 64)에서 도보 2분 거리인 <strong>만다린 오리엔탈 호텔 앞(Pg. de Gràcia 38-40) 07:40 집결 / 07:50 정시 출발</strong> (3.5mm 둥근 잭 유선 이어폰 4개 지참 필수! 차량 내 생수 외 음식·음료 반입 금지)
-              </div>
-              <span class="node-badge badge-confirmed">예약확정 (EXP-20261018-00004835)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚐 노마드벤츠 전용 차량 탑승 (약 50~60분 이동)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">⛰️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Montserrat+Monastery" target="_blank">몬세라트 수도원 집중 관람</a></span>
-                <span class="node-time">09:00~12:00</span>
-              </div>
-              <div class="node-detail">
-                가우디가 영감을 받은 톱니모양 기암괴석 절경 파노라마 뷰, 대성당 및 검은 성모마리아(라 모레네타) 친견.<br>
-                • <strong>선택 입장권:</strong> 성당 입장(9€/인), 검은 성모 보기(13€/인), 자유시간 중 푸니쿨라/박물관 선택 탑승 가능
-              </div>
-              <span class="node-badge badge-recommended">카탈루냐 성지</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚐 전용 차량 이동</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🫒</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">카탈루냐 전통 올리브 농장 체험 & 타파스 런치 (옵션B)</span>
-                <span class="node-time">12:30~15:30</span>
-              </div>
-              <div class="node-detail">
-                수백 년 된 고목 올리브 나무 숲 산책, 착유소 견학, 최상급 엑스트라 버진 올리브유 테이스팅 및 농가 가든에서 즐기는 신선한 로컬 타파스 런치 (필수 입장권 <strong>1인 50€ × 4인 = 200€</strong> 불포함 별도)
-              </div>
-              <span class="node-badge badge-confirmed">옵션B 올리브농장 확정</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚐 바르셀로나 시내 복귀 (총 9시간 30분 소요 · 만다린 앞 하차)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏢</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">시내 복귀 & Sixtyfour 아파트 잠시 휴식</span>
-                <span class="node-time">16:30~17:15</span>
-              </div>
-              <div class="node-detail">숙소 바로 앞 만다린 오리엔탈 하차(현지 교통에 따라 16:00~17:10 도착) 후 도보 2분 Sixtyfour 아파트에서 재충전</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 컨디션 맞춤 선택 (티비다보 전망대 OR 그라시아 산책)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🎡</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Tibidabo+Panoramic+Area" target="_blank">[선택] 티비다보 정상 전망대 OR 그라시아 일루미네이션</a></span>
-                <span class="node-time">17:15~18:30</span>
-              </div>
-              <div class="node-detail">
-                • <strong>[일찍 복귀 & 체력 여유 시]</strong> 택시 20분 이동하여 해발 512m 티비다보 정상 파노라마 뷰 & 야경 감상<br>
-                • <strong>[여유로운 휴식 희망 시]</strong> 아파트 휴식 후 그라시아 거리 크리스마스 야간 조명(일루미네이션) 산책
-              </div>
-              <span class="node-badge badge-recommended">유연한 오후 동선</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 이동</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍦</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=DeLaCrem+Enric+Granados+Barcelona" target="_blank">DeLaCrem 수제 젤라또 & Sixtyfour 저녁 휴식</a></span>
-                <span class="node-time">18:30~</span>
-              </div>
-              <div class="node-detail">바르셀로나 1위 천연 젤라또(피스타치오·딸기) 맛본 후 Sixtyfour 아파트 복귀 및 편안한 저녁 시간</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>평일 미팅 시간 & 숙소 초근접 이점:</strong> 주말(07:30)과 달리 수요일은 <strong>07:40 미팅 / 07:50 출발</strong>입니다. Sixtyfour 숙소에서 만다린 오리엔탈까지 <strong>도보 단 2분(150m)</strong> 거리라 아침 07:25~07:30에 나오셔도 여유롭게 합류할 수 있습니다!
-        </div>
-        <div class="alert-box">
-          ⚠️ <strong>필수 체크:</strong> 마이리얼트립 대화창에 <strong>① 카톡 연락처/ID, ② 몬세라트 선택 입장권(성당 9€·검은성모 13€) 신청 여부</strong>를 미리 남기세요. 당일 <strong>3.5mm 유선 이어폰 4개</strong>와 <strong>올리브농장 비용(50€×4인=200€)</strong>을 준비하시고, 차량 내에는 생수 외 음료/음식 반입이 금지됩니다.
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 7 -->
-    <div class="day-card" data-day="day7">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 7</span>
-          <span class="day-date">12/10 (목)</span>
-        </div>
-        <h3 class="day-title">산 파우 & 사그라다 파밀리아 & 루프탑 & 몬주익 마법의 분수쇼</h3>
-        <p class="day-intro">
-          동화 같은 산 파우 병원을 거쳐 사그라다 파밀리아 내부(14:30)와 탄생의 탑(15:00)을 등반하고 셀코텔 루프탑 노을을 감상합니다. 저녁에는 몬주익 성 대신 동절기 목요일에 열리는 <strong>몬주익 마법의 분수 쇼(20:00)</strong>를 화려하게 즐깁니다.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏥</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Sant+Pau+Recinte+Modernista" target="_blank">산 파우 병원 (Sant Pau)</a></span>
-                <span class="node-time">10:00</span>
-              </div>
-              <div class="node-detail">Sixtyfour 앞에서 <strong>FREE NOW 택시 10분(약 9~11€)</strong> 이동. 유네스코 세계문화유산 도메네크 이 몬타네르의 화려한 아르누보 타일과 정원 산책</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 가우디 거리 도보 10분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍽️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">가우디 거리 로컬 런치 & 호수 반영샷</span>
-                <span class="node-time">12:00</span>
-              </div>
-              <div class="node-detail">보행자 전용 가우디 거리 야외 테라스 점심 식사 후, 가우디 광장(Plaça de Gaudí) 연못 앞에서 사그라다 파밀리아 반영 가족 사진 촬영</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 3분 (C/ Marina 입구 14:15 도착)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">⛪</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Sagrada+Familia" target="_blank">사그라다 파밀리아 내부 & 탄생의 탑</a></span>
-                <span class="node-time">14:30~16:15</span>
-              </div>
-              <div class="node-detail">
-                • <strong>예약번호:</strong> <code>107954050</code> (일반 2매 + 30세 미만 2매 = <strong>총 140.00€ 결제 완료</strong>)<br>
-                • <strong>타임라인:</strong> <strong>14:30 성당 내부 입장</strong>(숲을 닮은 기둥과 무지개 스테인드글라스 빛내림) ➔ <strong>15:00 탄생의 파사드 탑(Tower on the Nativity facade) 엘리베이터 등반</strong><br>
-                • <strong>필수 준비:</strong> <code>Sagrada Família Oficial</code> 공식 앱 사전 다운로드(티켓 QR 및 한국어 오디오가이드), 여권 실물 지참, 운동화 착용!
-              </div>
-              <span class="node-badge badge-confirmed">예매완료 (107954050 / 140€ 완납)</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 횡단보도 2분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🌇</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Sercotel+Rosello+Rooftop" target="_blank">셀코텔 로셀로 루프탑</a></span>
-                <span class="node-time">16:30</span>
-              </div>
-              <div class="node-detail">Bar Terrassa Sercotel Rosselló. 성당 정면을 눈높이에서 마주하는 환상적인 노을 뷰 (대안: 도보 5분 래디슨 블루 1882 루프탑 El Cel Bar)</div>
-              <span class="node-badge badge-alert">11/25(수) 08:00 KST 오픈런</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 FREE NOW 택시 12분 ➔ 에스파냐 광장 이동</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍽️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Arenas+de+Barcelona" target="_blank">에스파냐 광장 저녁 식사 & 아레나스 전망대</a></span>
-                <span class="node-time">18:15~19:40</span>
-              </div>
-              <div class="node-detail">과거 투우장을 개조한 복합 쇼핑몰 <a href="https://maps.google.com/?q=Arenas+de+Barcelona" target="_blank">Arenas de Barcelona</a> 옥상 테라스에서 360도 야경 감상 및 타파스 만찬 식사</div>
-              <span class="node-badge badge-recommended">360도 야경 & 타파스</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 5분 ➔ 카를레스 부이가스 광장</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">⛲</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=Font+Magica+de+Montjuic" target="_blank">[일정 최종 반영] 몬주익 마법의 분수 쇼 (Font Màgica)</a></span>
-                <span class="node-time">20:00~20:45</span>
-              </div>
-              <div class="node-detail">
-                • <strong>일정 최종 포함 (몬주익 성은 포기):</strong> 동절기 유일하게 목·금·토요일 저녁에만 열리는 화려한 빛과 음악의 분수 쇼(무료 관람)! 카탈루냐 미술관을 배경으로 쏟아지는 분수 파노라마 감상.<br>
-                • <strong>실전 팁:</strong> 카탈루냐 미술관 앞 계단 중간쯤에 자리 잡으면 분수와 에스파냐 광장 야경이 한눈에 들어오는 최고의 포토존입니다.
-              </div>
-              <span class="node-badge badge-confirmed">무료 관람 / 목요일 분수쇼</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 FREE NOW 택시 10분 ➔ Sixtyfour 숙소 복귀</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🧳</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">Sixtyfour 복귀 & 귀국 수하물 최종 패킹</span>
-                <span class="node-time">21:00~</span>
-              </div>
-              <div class="node-detail">택시로 아파트 복귀. 구매한 액체류(와인, 올리브유 등)를 위탁용 캐리어에 분리 수납하고 최종 패킹 완료</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>가족 팁:</strong> 성당 탄생의 탑(15:00)은 엘리베이터로 올라간 후 좁은 나선형 계단으로 걸어 내려옵니다. 탑 등반 전 성당 1층 사물함에 가방을 모두 보관해야 하니 동전(또는 소액권)을 챙기세요.
-        </div>
-        <div class="alert-box">
-          ⚠️ <strong>체크:</strong> 사그라다 파밀리아 공식 앱에서 한국어 오디오가이드를 미리 다운로드하고 개인 이어폰을 준비하세요.
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 8 -->
-    <div class="day-card" data-day="day8">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 8</span>
-          <span class="day-date">12/11 (금)</span>
-        </div>
-        <h3 class="day-title">그라시아·카탈루냐 귀국 선물 쇼핑 & BCN 공항 출국</h3>
-        <p class="day-intro">
-          (보케리아 시장은 Day 2에 방문 완료!) Sixtyfour 체크아웃 후 남쪽으로 멀리 갈 필요 없이 숙소 바로 앞 그라시아 명품·패션 거리와 백화점에서 여유롭게 귀국 선물을 쇼핑하고 대형 밴(XL) 택시로 공항 이동합니다.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🧳</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">Sixtyfour 체크아웃 & 짐 보관</span>
-                <span class="node-time">10:00</span>
-              </div>
-              <div class="node-detail">체크아웃 후 Sixtyfour 프런트에 수하물 보관 (공항 이동 대형 밴 택시 사전 호출 요청)</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 5분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🛍️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=La+Chinata+Raval+Barcelona" target="_blank">라치나타 (La Chinata) & 그라시아 쇼핑</a></span>
-                <span class="node-time">10:30~11:45</span>
-              </div>
-              <div class="node-detail">최고급 엑스트라 버진 올리브오일, 올리브 립밤, 핸드크림 선물 세트 및 자녀 패션 브랜드 최종 쇼핑</div>
-              <span class="node-badge badge-recommended">귀국 선물 쇼핑</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 6분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏬</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://maps.google.com/?q=El+Corte+Ingles+Plaza+Catalunya" target="_blank">엘 코르테 잉글레스 백화점 프리미엄 식품관</a></span>
-                <span class="node-time">11:45~13:00</span>
-              </div>
-              <div class="node-detail">엑스트라 버진 올리브오일, 올리브 립밤, 1851년 전통 화덕에서 로스팅한 수제 아몬드 & 뚜론 쇼핑</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 10분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🍽️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">시내 마지막 점심 만찬</span>
-                <span class="node-time">13:30</span>
-              </div>
-              <div class="node-detail">카탈루냐 광장/그라시아 인근에서 스페인 현지 타파스로 아쉬운 마지막 식사 후 숙소에서 캐리어 픽업</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 숙소 Sixtyfour 복귀 & 위탁 캐리어 최종 패킹</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🚕</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">Sixtyfour 캐리어 픽업 & 대형 밴(XL) 택시로 BCN 공항 T1 이동</span>
-                <span class="node-time">16:00~17:00</span>
-              </div>
-              <div class="node-detail">
-                <strong>★귀국일 공항 이동 실전 팁 (16:30 출발 엄수):</strong><br>
-                • <strong>리셉션 사전 호출 강력 추천:</strong> 출발 30분~1시간 전 Sixtyfour 프런트/리셉션에 <strong>"공항 갈 대형 밴 택시(Taxi grande / Minivan)"</strong>를 사전 호출해 두면 로비 바로 앞으로 맞춰 배차됩니다.<br>
-                • <strong>앱 호출 시 주의사항:</strong> FREE NOW 앱 이용 시 반드시 일반(Lite)이 아닌 <strong>[Taxi XL]</strong> 옵션을 선택해야 대형 2개+기내용 2개(총 4개) 수납 가능한 6~8인승 밴이 배차됩니다 (일반 세단은 짐 적재 불가로 승차 거부 위험).<br>
-                • <strong>소요 시간 & 요금:</strong> 금요일 오후 도로 정체 감안 25~30분 소요, 요금 약 35~45€ (공항 할증 4.50€ 포함, 짐 추가 요금 무료, 카드 결제).
-              </div>
-              <span class="node-badge badge-alert">리셉션 대형 밴 사전 호출 or FREE NOW [Taxi XL]</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚕 대형 밴 택시 25~30분 ➔ BCN T1 3층 출발층 도착 (17:00)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">📑</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">BCN T1 공항 DIVA 환급</span>
-                <span class="node-time">17:15</span>
-              </div>
-              <div class="node-detail">수하물 위탁 전 3층 출발층 무인 키오스크에서 세관 도장 없이 바코드 스캔 (녹색 체크 승인 확인)</div>
-              <span class="node-badge badge-confirmed">간편 무인 스캔</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 도보 5분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">✈️</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">아시아나 OZ512 탑승</span>
-                <span class="node-time">20:40</span>
-              </div>
-              <div class="node-detail">수하물 위탁 후 출국 심사 및 면세점 구경, 바르셀로나 출발 (기내 1박 숙면)</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>귀국일 대형 택시 팁:</strong> 4인 가족과 캐리어 4개(대형 2+기내용 2)는 일반 승용차에 탈 수 없으므로, 출발 30분~1시간 전에 Sixtyfour 리셉션에 대형 밴 택시를 불러달라고 요청하시거나 FREE NOW 앱에서 [Taxi XL]을 호출해 16:30 정시에 여유 있게 공항으로 출발하세요.
-        </div>
-        <div class="alert-box">
-          ⚠️ <strong>체크:</strong> 구매한 액체류(와인, 올리브유, 화장품 등 100ml 초과)는 DIVA 스캔 후 반드시 위탁용 캐리어에 모두 넣으셔야 합니다.
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 9 -->
-    <div class="day-card" data-day="day9">
-      <div class="day-card-header">
-        <div class="day-badge-row">
-          <span class="day-badge">Day 9</span>
-          <span class="day-date">12/12 (토)</span>
-        </div>
-        <h3 class="day-title">인천공항 도착 & 안전 귀가</h3>
-        <p class="day-intro">
-          17:00 인천공항 T2에 무사히 도착하여 자동출입국 심사와 수하물 수령을 마치고, T2 공식 발렛(아마노코리아)으로 자차를 인도받아 귀가하며 소중한 가족 여행을 마무리합니다.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <div class="timeline-list">
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🌅</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">기내 아침 & 착륙 준비</span>
-                <span class="node-time">15:00</span>
-              </div>
-              <div class="node-detail">아시아나 2차 기내식(죽 또는 오믈렛) 식사, 가족 여행 사진 정리 및 입국 서류 점검</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">✈️ 인천국제공항 T2 착륙 (17:00 정시)</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🇰🇷</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">자동출입국 심사 & 짐 수령</span>
-                <span class="node-time">17:30</span>
-              </div>
-              <div class="node-detail">T2 자동출입국 심사대 신속 통과 ➔ 1층 수하물 수취대에서 캐리어 4개 수령 & 세관 신고</div>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚶 단기주차장 지하 1층 정산소 도보 10분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🚗</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name"><a href="https://valet.amanopark.co.kr/?modal=booking&bookingUid=89888867" target="_blank">T2 공식 발렛 차량 인도</a></span>
-                <span class="node-time">18:20</span>
-              </div>
-              <div class="node-detail">주차요금 정산기에서 사전 정산 후 보관된 자차(32라2418) 수령 (예약번호 89888867, KT 멤버십/카드 혜택 적용)</div>
-              <span class="node-badge badge-confirmed">발렛 수령 완료</span>
-            </div>
-          </div>
-
-          <div class="transit-step"><span class="transit-pill">🚗 올림픽대로 경유 자차 60분</span></div>
-
-          <div class="timeline-node">
-            <div class="node-icon-circle">🏡</div>
-            <div class="node-content">
-              <div class="node-header">
-                <span class="node-name">자택 도착 (삼성로 14)</span>
-                <span class="node-time">19:30</span>
-              </div>
-              <div class="node-detail">가족 모두 안전하게 귀가 완료! 7박 9일 행복했던 바르셀로나 여행 완주 🎉</div>
-              <span class="node-badge badge-confirmed">여행 완주!</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="day-card-footer">
-        <div class="tip-box">
-          💡 <strong>가족 팁:</strong> 장거리 비행 후 피로 해소를 위해 귀가 즉시 짐을 가볍게 풀고 따뜻한 한식과 함께 푹 휴식하세요.
-        </div>
-        <div class="alert-box">
-          ⚠️ <strong>체크:</strong> T2 주차 요금 정산 시 하이패스 자동 결제 또는 카드 결제 영수증 확인.
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Bottom Action Banner -->
-  <div class="bottom-banner">
-    <h3>📱 언제 어디서나 스마트폰으로 확인하는 동선 가이드북</h3>
-    <p>
-      이 HTML 문서는 스마트폰 브라우저에 북마크하거나 오프라인 파일로 저장하여 현지에서 데이터 부담 없이 언제든지 열어보실 수 있습니다.
-    </p>
-    <div class="action-buttons">
-      <a href="https://docs.google.com/spreadsheets/d/1-9xeBNnH7XYricgwkegfPDC55tZk5rihjWDAVYDCX0s/edit" target="_blank" class="btn btn-primary">
-        📊 실시간 구글 시트 여행 일정표 열기
-      </a>
-      <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn">
-        ⬆️ 맨 위로 이동
-      </button>
+    <div class="day-footer-tip">
+      <span>💡</span>
+      <span>경기 종료 후 스타디움 정문은 극심한 정체입니다. 그랜드 하얏트 로비 승강장을 이용하면 추위와 인파를 피해 쾌적하게 귀가할 수 있습니다.</span>
     </div>
   </div>
+
+  <!-- Day 3 -->
+  <div class="day-card" data-day="day3">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 3</span>
+        <span class="day-date">12/6 (일)</span>
+      </div>
+      <h2 class="day-title">호텔 늦잠 ➔ 피카소 미술관(무료) ➔ 해변 빠에야 ➔ 코스모카이샤</h2>
+      <div class="day-summary-pill">축구 다음날 늦잠 & 조식 ➔ 피카소 무료관람 ➔ 바르셀로네타 Maná 75 빠에야 ➔ 코스모카이샤 대형 과학관</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🛌</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">H10 늦잠 & 여유로운 조식</span>
+              <span class="node-time">09:00~10:30</span>
+            </div>
+            <div class="node-desc">축구 직관 피로 해소 늦잠 ➔ 조식 뷔페 식사 후 외출 준비</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 택시 7분 (또는 보른 골목 도보 15분)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🎨</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Museu+Picasso+Barcelona" target="_blank">피카소 미술관 (첫째 일요일 무료)</a></span>
+              <span class="node-time">11:00~12:45</span>
+            </div>
+            <div class="node-desc">
+              첫째 주 일요일 무료 관람 (<strong>12/2 수 18:00 KST 공홈 4인 사전예약 필수</strong>).<br>
+              • <strong>꿀팁:</strong> 입장 직후 <strong>12번 전시실(시녀들 연작)</strong>부터 먼저 보고 역순 관람 시 쾌적!
+            </div>
+            <span class="node-badge badge-alert">12/2 18:00 사전예약</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 성당 경유 ➔ 🚕 택시 10분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🥘</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Mana+75+Barcelona" target="_blank">Maná 75 바르셀로네타 해변 빠에야 런치</a></span>
+              <span class="node-time">13:30~15:00</span>
+            </div>
+            <div class="node-desc">바르셀로나 최고 해산물·먹물 빠에야 오픈키친 (주문 시 <strong>"Poco sal, por favor"</strong> 필수!) ➔ 해변 산책</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 택시 20분 (북부 이동)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🔬</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=CosmoCaixa+Barcelona" target="_blank">코스모카이샤 (CosmoCaixa) 과학관</a></span>
+              <span class="node-time">15:30~18:00</span>
+            </div>
+            <div class="node-desc">일요일 정상영업. 1,000㎡ 아마존 침수림 대형 수조(카피바라, 대형 피라루쿠) & 만지고 조작하는 물리·우주 전시 체험</div>
+            <span class="node-badge badge-plan">초6 자녀 만족도 1위</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 택시 15분 ➔ 호텔 복귀</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🏨</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">카탈루냐 광장 저녁 & H10 복귀</span>
+              <span class="node-time">18:30~</span>
+            </div>
+            <div class="node-desc">인근 캐주얼 저녁 식사 후, 내일 숙소 이동(Sixtyfour)을 위해 가볍게 짐 정리</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer-tip">
+      <span>💡</span>
+      <span>12/2(수) 18:00 알림이 울리면 피카소 미술관 11:00 슬롯 4인 무료 티켓을 바로 예약하세요.</span>
+    </div>
+  </div>
+
+  <!-- Day 4 -->
+  <div class="day-card" data-day="day4">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 4</span>
+        <span class="day-date">12/7 (월)</span>
+      </div>
+      <h2 class="day-title">숙소 이동 ➔ 카탈루냐 음악당(채광) ➔ 그라시아 쇼핑 ➔ 홈쿡</h2>
+      <div class="day-summary-pill">Sixtyfour 짐 보관 ➔ 음악당 채광 골든타임 ➔ El Nacional 점심 ➔ 그라시아 10대 쇼핑 & 호프만 크루아상 ➔ 메르카도나 홈쿡</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🧳</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">H10 체크아웃 ➔ Sixtyfour 짐 보관</span>
+              <span class="node-time">10:00</span>
+            </div>
+            <div class="node-desc">H10 체크아웃 ➔ 택시 5분 ➔ <a href="https://maps.google.com/?q=Apartments+Sixtyfour+Barcelona" target="_blank">Apartments Sixtyfour</a> 리셉션에 수하물 사전 보관</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 택시 5분 (또는 도보 12분)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🎵</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Palau+de+la+Musica+Catalana" target="_blank">카탈루냐 음악당 집중 관람 (채광 골든타임)</a></span>
+              <span class="node-time">10:30~11:30</span>
+            </div>
+            <div class="node-desc">
+              스테인드글라스 황금빛 채광 골든타임(10~12시) 관람 및 2층 테라스 모자이크 꽃기둥 가족샷.<br>
+              • 예약 <code>102911658</code> (76€ 완납) ➔ 11월 축구시간 확정 시 월 10:30 슬롯으로 1회 변경 진행
+            </div>
+            <span class="node-badge badge-alert">12/7 10:30 변경 예정</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 도보 7분 (음악당 ➔ El Nacional 직결)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🍽️</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=El+Nacional+Barcelona" target="_blank">El Nacional 점심 식사</a></span>
+              <span class="node-time">11:45~13:00</span>
+            </div>
+            <div class="node-desc">아르데코 글래스 돔 아래 지중해식 해산물 & 그릴 요리 만찬</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 도보 3분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🛍️</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Passeig+de+Gracia+Barcelona" target="_blank">그라시아 쇼핑 & 호프만 디저트</a></span>
+              <span class="node-time">13:00~16:15</span>
+            </div>
+            <div class="node-desc">
+              초6 취향 저격 브랜드: <a href="https://maps.google.com/?q=Subdued+Passeig+de+Gracia+Barcelona" target="_blank">Subdued</a>, <a href="https://maps.google.com/?q=Bimba+y+Lola+Passeig+de+Gracia+Barcelona" target="_blank">Bimba y Lola</a>, Zara, Ale-Hop 산책 ➔ <a href="https://maps.google.com/?q=Pastisseria+Hofmann+Barcelona" target="_blank">호프만 베이커리</a> 마스카포네 크루아상
+            </div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 도보 5분 (16:30 Sixtyfour 입실)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🥩</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Mercadona+Carrer+del+Consell+de+Cent+366+Barcelona" target="_blank">메르카도나 장보기 & 홈쿡 파티</a></span>
+              <span class="node-time">17:30~19:30</span>
+            </div>
+            <div class="node-desc">
+              이베리코 목살, 생오렌지주스, 하몬, 와인(Costalara 등) 장보기 ➔ 아파트 키친에서 이베리코 스테이크 & 불닭볶음면 패밀리 디너!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer-tip">
+      <span>💡</span>
+      <span>내일(12/8 화)은 스페인 공휴일로 대형마트가 쉬므로 오늘 저녁에 이틀치 식재료를 장봐 두세요.</span>
+    </div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="day-card" data-day="day5">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 5</span>
+        <span class="day-date">12/8 (화) [공휴일]</span>
+      </div>
+      <h2 class="day-title">가우디 반일투어(차량) ➔ 가우디 거리 ➔ 아파트 휴식</h2>
+      <div class="day-summary-pill">숙소 맞은편 07:45 미팅 ➔ 까사 바뜨요 내부 ➔ 까사 밀라 ➔ 구엘 공원 ➔ 사그라다 파밀리아 외관 ➔ 점심 후 오후 푹 쉬기</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🚶</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">숙소 맞은편 GEOX 앞 미팅 (도보 1분)</span>
+              <span class="node-time">07:45</span>
+            </div>
+            <div class="node-desc">인디고트래블 가이드 미팅 (예약 <code>EXP-20261011-00010137</code>, 전용차량 이동, 3.5mm 유선이어폰 4개 필수 지참)</div>
+            <span class="node-badge badge-done">예약확정 (인디고트래블)</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🏛️ 가이드 동반 내부 관람</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🐉</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">까사 바뜨요 내부 관람</span>
+              <span class="node-time">08:00~09:15</span>
+            </div>
+            <div class="node-desc">바닷속 환상 공간 내부 해설 관람 (성인 23€ 대행 / 만 12세 이하 어린이 무료티켓 신청완료)</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚌 전용 차량 이동</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🦎</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">까사 밀라 외관 ➔ 구엘 공원 내부</span>
+              <span class="node-time">09:20~11:45</span>
+            </div>
+            <div class="node-desc">까사 밀라 외관 해설 후 전용 버스로 구엘 공원 정문 직행(오르막 회피). 모자이크 도마뱀 & 자연광장 (입장권 18€ 대행)</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚌 전용 차량 이동</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">⛪</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">사그라다 파밀리아 외관 해설 & 투어 종료</span>
+              <span class="node-time">12:15~13:20</span>
+            </div>
+            <div class="node-desc">탄생·수난의 파사드 조각상 완벽 해설 ➔ 13:20 성당 앞 투어 종료 (내부 입장은 12/10 목에 별도 진행)</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🍽️ 점심 후 🚕 택시 8분 복귀</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🛋️</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">가우디 거리 점심 ➔ 아파트 휴식 & 홈쿡</span>
+              <span class="node-time">13:30~</span>
+            </div>
+            <div class="node-desc">가우디 거리 테라스 점심 후 택시로 Sixtyfour 복귀. 오후 낮잠 휴식 및 저녁 홈쿡 만찬 (공휴일 마트는 도보 2분 Supercor 이용)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer-tip">
+      <span>💡</span>
+      <span>투어 종료 후 바로 숙소로 복귀해 다리 피로를 풀고 여유롭게 충전하는 것이 핵심 일정입니다.</span>
+    </div>
+  </div>
+
+  <!-- Day 6 -->
+  <div class="day-card" data-day="day6">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 6</span>
+        <span class="day-date">12/9 (수)</span>
+      </div>
+      <h2 class="day-title">몬세라트 & 올리브농장 근교투어 ➔ 시내 복귀 & 휴식</h2>
+      <div class="day-summary-pill">숙소 도보 2분 07:40 미팅 ➔ 몬세라트 수도원 절경 ➔ 전통 올리브농장 & 타파스 런치 ➔ 시내 복귀 후 일루미네이션 산책</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🚶</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.app.goo.gl/GaoWi3bwrcGaoxhVA" target="_blank">만다린 오리엔탈 앞 미팅 (도보 2분)</a></span>
+              <span class="node-time">07:40~07:50</span>
+            </div>
+            <div class="node-desc">노마드벤츠 투어 집결 (예약 <code>EXP-20261018-00004835</code>, 07:50 정시출발, 3.5mm 유선이어폰 지참, 생수 외 음식반입 불가)</div>
+            <span class="node-badge badge-done">예약완료 (옵션B)</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚐 전용 벤츠 밴 50분 이동</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">⛰️</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Montserrat+Monastery" target="_blank">몬세라트 수도원 절경 & 검은 성모</a></span>
+              <span class="node-time">09:00~12:00</span>
+            </div>
+            <div class="node-desc">기암괴석 파노라마 절경, 대성당 및 검은 성모마리아(라 모레네타) 친견 (성당 9€, 검은성모 13€ 선택)</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚐 농장 이동</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🫒</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">전통 올리브 농장 체험 & 타파스 런치</span>
+              <span class="node-time">12:30~15:30</span>
+            </div>
+            <div class="node-desc">수백 년 고목 올리브 숲 산책, 착유소 견학, 최고급 올리브유 테이스팅 & 가든 타파스 런치 (필수 입장권 50€×4인 별도)</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚐 시내 복귀 (만다린 앞 하차)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🏢</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">시내 복귀 ➔ Sixtyfour 휴식 & 산책</span>
+              <span class="node-time">16:30~</span>
+            </div>
+            <div class="node-desc">숙소 바로 앞 하차 후 도보 2분 복귀 ➔ 그라시아 일루미네이션 산책 & <a href="https://maps.google.com/?q=DeLaCrem+Enric+Granados+Barcelona" target="_blank">DeLaCrem</a> 수제 젤라또</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer-tip">
+      <span>💡</span>
+      <span>수요일 평일 미팅은 07:40입니다. 숙소에서 150m 거리라 07:30에 나서셔도 여유롭게 합류할 수 있습니다.</span>
+    </div>
+  </div>
+
+  <!-- Day 7 -->
+  <div class="day-card" data-day="day7">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 7</span>
+        <span class="day-date">12/10 (목)</span>
+      </div>
+      <h2 class="day-title">산 파우 ➔ 사그라다 내부·탑 ➔ 루프탑 ➔ 몬주익 분수쇼</h2>
+      <div class="day-summary-pill">산 파우 병원 ➔ 가우디 거리 반영샷 ➔ 사그라다 내부(14:30) & 탑(15:00) ➔ 셀코텔 루프탑 노을 ➔ 20:00 몬주익 마법의 분수쇼</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🏥</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Sant+Pau+Recinte+Modernista" target="_blank">산 파우 병원 (Sant Pau)</a></span>
+              <span class="node-time">10:00~11:45</span>
+            </div>
+            <div class="node-desc">택시 10분 이동. 유네스코 문화유산 아르누보 타일과 정원 산책</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 가우디 거리 도보 10분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🍽️</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">가우디 거리 점심 & 호수 반영샷</span>
+              <span class="node-time">12:00~14:00</span>
+            </div>
+            <div class="node-desc">야외 테라스 점심 식사 후, 가우디 광장 연못 앞에서 사그라다 파밀리아 반영 가족사진 촬영</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 도보 3분 (Marina 입구)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">⛪</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Sagrada+Familia" target="_blank">사그라다 파밀리아 내부 & 탄생의 탑</a></span>
+              <span class="node-time">14:30~16:15</span>
+            </div>
+            <div class="node-desc">
+              • 예약 <code>107954050</code> (140€ 완납, 공식앱 오디오가이드 & 여권 필수)<br>
+              • <strong>14:30 성당 내부 입장</strong>(스테인드글라스 빛내림) ➔ <strong>15:00 탄생의 탑 엘리베이터 등반</strong>
+            </div>
+            <span class="node-badge badge-done">예매완료 (107954050)</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 횡단보도 2분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🌇</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Sercotel+Rosello+Rooftop" target="_blank">셀코텔 로셀로 루프탑 노을 뷰</a></span>
+              <span class="node-time">16:30~17:45</span>
+            </div>
+            <div class="node-desc">성당 정면을 눈높이에서 마주하는 노을 전경 (11/25 수 08:00 KST 오픈런 예약)</div>
+            <span class="node-badge badge-alert">11/25 08:00 오픈런</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 택시 12분 ➔ 에스파냐 광장</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">⛲</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=Font+Magica+de+Montjuic" target="_blank">아레나스 저녁 ➔ 몬주익 마법의 분수쇼</a></span>
+              <span class="node-time">18:15~20:45</span>
+            </div>
+            <div class="node-desc">
+              <a href="https://maps.google.com/?q=Arenas+de+Barcelona" target="_blank">Arenas de Barcelona</a> 옥상 360도 야경 & 타파스 식사 ➔ <strong>20:00~20:45 몬주익 마법의 분수 쇼(무료 관람)</strong> 감상 (몬주익 성은 제외!)
+            </div>
+            <span class="node-badge badge-done">무료 관람 / 목요일 분수쇼</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 택시 10분 ➔ Sixtyfour 복귀</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🧳</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">Sixtyfour 복귀 & 귀국 짐 패킹</span>
+              <span class="node-time">21:00~</span>
+            </div>
+            <div class="node-desc">아파트 복귀 후 액체류(와인, 올리브유 등)를 위탁 캐리어에 분리 수납 최종 패킹</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer-tip">
+      <span>💡</span>
+      <span>탄생의 탑(15:00)은 나선형 계단으로 내려옵니다. 탑 등반 전 성당 1층 사물함에 가방을 넣어야 하니 소액 동전을 챙기세요.</span>
+    </div>
+  </div>
+
+  <!-- Day 8 -->
+  <div class="day-card" data-day="day8">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 8</span>
+        <span class="day-date">12/11 (금)</span>
+      </div>
+      <h2 class="day-title">그라시아·백화점 선물 쇼핑 ➔ BCN 출국</h2>
+      <div class="day-summary-pill">체크아웃 & 짐보관 ➔ 라치나타 & 엘코르테잉글레스 귀국 선물 ➔ 마지막 런치 ➔ 대형 밴 택시 ➔ 공항 DIVA 환급 & 출국</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🧳</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">Sixtyfour 체크아웃 & 짐 보관</span>
+              <span class="node-time">10:00</span>
+            </div>
+            <div class="node-desc">체크아웃 후 프런트에 짐 보관 및 <strong>공항 이동 대형 밴(XL) 택시 사전 호출 요청</strong></div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 도보 5분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🛍️</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=La+Chinata+Raval+Barcelona" target="_blank">라치나타 (La Chinata) & 그라시아 쇼핑</a></span>
+              <span class="node-time">10:30~11:45</span>
+            </div>
+            <div class="node-desc">최고급 엑스트라 버진 올리브유, 올리브 립밤, 핸드크림 선물세트 구매</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 도보 6분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🏬</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://maps.google.com/?q=El+Corte+Ingles+Plaza+Catalunya" target="_blank">엘 코르테 잉글레스 백화점 식품관</a></span>
+              <span class="node-time">11:45~13:00</span>
+            </div>
+            <div class="node-desc">지하 프리미엄 식품관에서 스페인 뚜론, 와인, 하몬 등 막바지 귀국 선물 쇼핑</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🍽️ 마지막 점심 식사 후 숙소 복귀</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🚕</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">Sixtyfour ➔ 대형 밴(XL) 택시로 BCN 공항 이동</span>
+              <span class="node-time">16:00~17:00</span>
+            </div>
+            <div class="node-desc">
+              <strong>★16:30 정시 출발 엄수:</strong> Sixtyfour 리셉션에 예약된 대형 밴 탑승 (짐 4개 수납, 25~30분 소요, 약 35~45€)
+            </div>
+            <span class="node-badge badge-alert">대형 밴 택시 필수</span>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚕 BCN T1 출발층 3층 도착 (17:00)</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">📑</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">BCN T1 무인 DIVA 환급 ➔ 아시아나 탑승</span>
+              <span class="node-time">17:15~20:40</span>
+            </div>
+            <div class="node-desc">
+              짐 부치기 전 3층 키오스크에서 바코드 무인 스캔(녹색 체크 확인) ➔ 수하물 위탁 ➔ 보안검색 & 면세점 ➔ <strong>20:40 OZ512편 탑승</strong>
+            </div>
+            <span class="node-badge badge-done">간편 무인 스캔</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer-tip">
+      <span>💡</span>
+      <span>구매하신 100ml 초과 액체류(와인, 올리브유 등)는 공항 DIVA 스캔 후 반드시 위탁 캐리어에 넣으셔야 합니다.</span>
+    </div>
+  </div>
+
+  <!-- Day 9 -->
+  <div class="day-card" data-day="day9">
+    <div class="day-card-header">
+      <div class="day-badge-row">
+        <span class="day-badge">Day 9</span>
+        <span class="day-date">12/12 (토)</span>
+      </div>
+      <h2 class="day-title">인천공항 도착 ➔ 발렛 차량 인도 ➔ 귀가</h2>
+      <div class="day-summary-pill">17:00 인천 T2 도착 ➔ 자동입국 & 짐 수령 ➔ 공식 발렛 차량(32라2418) 인도 ➔ 안전 귀가</div>
+    </div>
+    <div class="timeline-container">
+      <div class="timeline-list">
+        <div class="timeline-node">
+          <div class="node-icon">🇰🇷</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name">인천공항 T2 도착 & 짐 수령</span>
+              <span class="node-time">17:00~18:00</span>
+            </div>
+            <div class="node-desc">자동출입국 심사대 통과 ➔ 1층 수하물 수취대 짐 4개 수령 & 세관 통과</div>
+          </div>
+        </div>
+        <div class="transit-divider"><span class="transit-pill">🚶 단기주차장 지하 1층 도보 10분</span></div>
+        <div class="timeline-node">
+          <div class="node-icon">🚗</div>
+          <div class="node-content">
+            <div class="node-header">
+              <span class="node-name"><a href="https://valet.amanopark.co.kr/?modal=booking&bookingUid=89888867" target="_blank">T2 공식 발렛 차량 인도 ➔ 자택 귀가</a></span>
+              <span class="node-time">18:20~19:30</span>
+            </div>
+            <div class="node-desc">정산기 주차비 정산 후 보관 차량(32라2418) 수령 (예약 <code>89888867</code>) ➔ 자택(삼성로 14) 안전 귀가! 여행 완주 🎉</div>
+            <span class="node-badge badge-done">여행 완주!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </main>
 
-<footer>
-  <p>© 2026 Barcelona Family Trip. Designed for comfortable, memorable, and safe family travel.</p>
-</footer>
+<!-- Bottom Sticky Quick Floating Bar for Smartphones -->
+<div class="bottom-quick-bar">
+  <a href="https://docs.google.com/spreadsheets/d/1-9xeBNnH7XYricgwkegfPDC55tZk5rihjWDAVYDCX0s/edit" target="_blank" class="bottom-quick-btn highlight">
+    📊 구글시트
+  </a>
+  <a href="https://drive.google.com/file/d/1UpzRczGNhGivFd5I2yjW_et6lO3RFFLU/view" target="_blank" class="bottom-quick-btn">
+    🎨 동선 PDF
+  </a>
+  <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="bottom-quick-btn">
+    ⬆️ 맨위로
+  </button>
+</div>
 
 <script>
-  function toggleDashboard() {
-    const grid = document.getElementById('dashboardGrid');
-    const btn = document.getElementById('toggleDashBtn');
-    if (!grid || !btn) return;
-    if (grid.style.display === 'none') {
-      grid.style.display = 'grid';
-      btn.innerHTML = '📋 대시보드 접기 🔼';
+  function toggleDash() {
+    const body = document.getElementById('dashBody');
+    const icon = document.getElementById('dashIcon');
+    if (body.classList.contains('open')) {
+      body.classList.remove('open');
+      icon.innerText = '🔽';
     } else {
-      grid.style.display = 'none';
-      btn.innerHTML = '📋 대시보드 펼치기 🔽';
+      body.classList.add('open');
+      icon.innerText = '🔼';
     }
   }
 
-  function filterDay(dayId, btn) {
+  function switchDay(dayId, btn) {
     const cards = document.querySelectorAll('.day-card');
     const tabs = document.querySelectorAll('.nav-tab');
-
+    
     tabs.forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
 
     cards.forEach(card => {
       if (dayId === 'all') {
-        card.style.display = 'flex';
+        card.style.display = 'block';
       } else {
         if (card.getAttribute('data-day') === dayId) {
-          card.style.display = 'flex';
+          card.style.display = 'block';
         } else {
           card.style.display = 'none';
         }
       }
     });
 
+    // Auto scroll slightly below sticky header
     if (dayId !== 'all') {
       const activeCard = document.querySelector(`.day-card[data-day="${dayId}"]`);
       if (activeCard) {
-        activeCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.scrollTo({ top: 80, behavior: 'smooth' });
       }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 </script>
