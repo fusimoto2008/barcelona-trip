@@ -206,6 +206,66 @@
     font-weight: bold;
   }
 
+    /* Master Dashboard Sub-accordions */
+  .dash-sub-item {
+    margin-bottom: 8px;
+    border: 1px solid #FFE082;
+    border-radius: var(--radius-sm);
+    background: #FFFFFF;
+    overflow: hidden;
+  }
+  .dash-sub-item:last-child { margin-bottom: 0; }
+  .dash-sub-title {
+    padding: 8px 12px;
+    background: #FFF8E1;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: #78350F;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .dash-sub-title::-webkit-details-marker { display: none; }
+  .dash-sub-title::after {
+    content: "▾";
+    font-size: 13px;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  .dash-sub-item[open] .dash-sub-title::after {
+    transform: rotate(180deg);
+  }
+  .dash-sub-content {
+    padding: 10px 12px;
+    font-size: 12px;
+    color: #334155;
+    line-height: 1.5;
+    border-top: 1px dashed #FFE082;
+  }
+  .dash-sub-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .dash-sub-content li {
+    position: relative;
+    padding-left: 14px;
+    line-height: 1.45;
+  }
+  .dash-sub-content li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--primary);
+    font-weight: bold;
+  }
+
   /* Main Container */
   main {
     max-width: 900px;
@@ -520,28 +580,92 @@
 <!-- Collapsible Master Dashboard Accordion -->
 <div class="dashboard-accordion">
   <div class="dash-toggle-header" onclick="toggleDash()">
-    <span>📋 예약 확정 내역 & 여행 실전 팁 (터치하여 펼치기)</span>
+    <span>📋 통합 여행 실전 노트 & 예약 마스터 (터치하여 펼치기)</span>
     <span id="dashIcon">🔽</span>
   </div>
   <div class="dash-body" id="dashBody">
-    <div class="dash-sec-title">🎫 핵심 확정 예약 번호</div>
-    <ul class="dash-bullets">
-      <li><strong>사그라다 파밀리아:</strong> 12/10 14:30 내부 + 15:00 탄생의 탑 (예약번호 <code>107954050</code>, 140€ 완납, 공식앱 오디오가이드 & 여권 필수)</li>
-      <li><strong>가우디 반일투어:</strong> 12/8 07:45 미팅 (<code>EXP-20261011-00010137</code>, 구엘18€·바뜨요23€ 대행 / 만12세이하 바뜨요 무료티켓 신청완료)</li>
-      <li><strong>몬세라트&올리브:</strong> 12/9 07:40 미팅 (<code>EXP-20261018-00004835</code>, 만다린 앞 도보 2분 / 농장비 50€×4인 현장지불)</li>
-      <li><strong>음악당 투어:</strong> 12/7 10:30 슬롯 1회 변경 예정 (예약번호 <code>102911658</code>, 76€ 완납 / 11월 경기시간 확정 후 이메일 링크 변경)</li>
-      <li><strong>캄 노우 직관:</strong> 12/5 2nd Grandstand Lower 4인 (<code>CXWD7CW8W2NJ</code>, 공식 킥오프 대기)</li>
-      <li><strong>피카소 미술관:</strong> 12/6 11:00 첫째 일요일 무료 (12/2 18:00 KST 공홈 4인 0€ 사전예약 필수)</li>
-      <li><strong>T2 발렛:</strong> 아마노코리아 예약번호 <code>89888867</code> (차량 32라2418, 12/4 08:30 T2 지하1층 접수)</li>
-    </ul>
+    
+    <!-- 1. 확정 예약 & 항공·스카이패스·보험 -->
+    <details class="dash-sub-item" open>
+      <summary class="dash-sub-title">🎫 확정 예약 & 항공·스카이패스·보험</summary>
+      <div class="dash-sub-content">
+        <ul>
+          <li><strong>아시아나 직항:</strong> 출국 12/4(금) 12:00 인천 T2 ➔ 18:55 BCN T1 (OZ511, 14h) / 귀국 12/11(금) 20:40 BCN T1 ➔ 12/12(토) 17:00 인천 T2 (OZ512) | 모바일 체크인: 12/2(수) 12:00 KST 오픈</li>
+          <li><strong>스카이패스 회원번호:</strong> 김인선 <code>113218267156</code>, 류지혜 <code>115028485641</code>, 김상아 <code>120421439200</code>, 김승아 <code>120421439232</code></li>
+          <li><strong>해외 여행자보험 (2중 보장):</strong> [메인] 카카오페이손보 4인 가입완료 (상해/질병 각 5천만원, 휴대품 도난 100만원, 배상책임 5천만원) + [백업] 마스터카드 월드 무료보험 (등록번호 <code>0260180634</code> / 본인 최대 1.15억원, 가족 50%)</li>
+          <li><strong>인천공항 T2 시설:</strong> 아마노코리아 발렛 주차대행 (예약번호 <code>89888867</code>, 차량 32라2418, 12/4 08:30 접수) | 마티나 골드 라운지 (본인+동반1인 PP 2회 + 가족카드 1회 + 1인 유료) | 스마트패스 4인 안면 ID 등록완료</li>
+          <li><strong>1차 숙소:</strong> H10 Universitat (예약 <code>3103-E30FAF28C014</code>, 12/4~12/7 3박 조식포함 928.60€ 선결제 완납, 가습기 요청완료 / 성인 2인 시티택스만 현장결제)</li>
+          <li><strong>2차 숙소:</strong> Apartments Sixtyfour (예약 <code>248629</code> / Pin <code>2660</code>, 12/7~12/11 4박 Superior 2-Bedroom 1,490.48€ 시티택스포함 / 24시간 리셉션 연계, 풀키친)</li>
+          <li><strong>사그라다 파밀리아:</strong> 12/10 14:30 내부 + 15:00 탄생의 탑 (예약번호 <code>107954050</code>, 4인 140€ 완납, 공식앱 오디오가이드 & 여권 필수)</li>
+          <li><strong>가우디 반일투어:</strong> 12/8 07:45 미팅 (<code>EXP-20261011-00010137</code>, 숙소 맞은편 GEOX 앞, 인디고트래블 전용차량 / 구엘18€·바뜨요23€ 완납)</li>
+          <li><strong>몬세라트&올리브:</strong> 12/9 07:40 미팅 (<code>EXP-20261018-00004835</code>, 숙소 도보 2분 만다린 앞, 노마드벤츠 / 농장비 50€×4인 현장지불)</li>
+          <li><strong>음악당 집중투어:</strong> 12/7 10:30 슬롯 1회 변경 예정 (예약 <code>102911658</code>, 76€ 완납 / 11월 경기시간 확정 후 이메일 링크 변경)</li>
+          <li><strong>캄 노우 직관:</strong> 12/5 라리가 2nd Grandstand Lower 4인 (<code>CXWD7CW8W2NJ</code>, 공식 킥오프 대기)</li>
+          <li><strong>피카소 미술관:</strong> 12/6 11:00 첫째 일요일 전관 무료 (12/2 18:00 KST 공홈 4인 0€ 사전예약 필수)</li>
+          <li><strong>백업 문서함:</strong> <a href="https://naver.me/56D1UUAn" target="_blank">네이버 MYBOX 백업문서 바로가기</a></li>
+        </ul>
+      </div>
+    </details>
 
-    <div class="dash-sec-title">🚕 택시 & 이동 원칙</div>
-    <ul class="dash-bullets">
-      <li><strong>공항↔시내:</strong> 짐 4개(대형2+기내2)로 <strong>대형 밴(Minivan/XL) 필수!</strong> T1 승강장 안내원에게 <em>"Cuatro personas, cuatro maletas"</em> 요청 (짐 추가비 무료, 공항할증 포함 약 35~42€). 귀국일은 Sixtyfour 리셉션에 대형 밴 사전 예약 요청!</li>
-      <li><strong>시내 이동:</strong> 1순위 FREE NOW 앱(노란택시) + 2순위 길거리 초록불 택시 + Cabify.</li>
-      <li><strong>일요일/공휴일 마트:</strong> Sixtyfour 도보 2분 <strong>Supercor Exprés</strong>(Aragó 308, 연중무휴 07~01시) & <strong>Tomato 한인마트</strong>(Aragó 284) 활용.</li>
-      <li><strong>주문/결제 팁:</strong> 음식 주문 시 <em>"Poco sal, por favor (소금 적게)"</em> 필수! 영수증 빵값(Pan) 및 테라스 할증(10~15%) 확인.</li>
-    </ul>
+    <!-- 2. 가족 필수 준비물 & 패킹 체크리스트 -->
+    <details class="dash-sub-item">
+      <summary class="dash-sub-title">🎒 가족 패킹 & 필수 준비물 체크리스트</summary>
+      <div class="dash-sub-content">
+        <ul>
+          <li><strong>📱 전자기기 & 통신:</strong> 3.5mm 일반 유선이어폰 4개 (가우디 & 몬세라트 수신기 필수), C타입/라이트닝 변환젠더, 멀티탭(3~4구) & 유럽형 멀티어댑터, 스마트폰 스트랩 (소매치기 방지 필수), 필수 앱(FREE NOW, Cabify, Sagrada Família)</li>
+          <li><strong>🔌 생활용품 & 숙소 편의:</strong> 전기장판 (겨울철 유럽 라디에이터 보완용 필수), 휴대용 드라이어, 실내용 슬리퍼 4켤레, 캐리어 자물쇠, 선글라스 4개 (부모2 + 아이2)</li>
+          <li><strong>🍜 비상식량 & 한식 홈쿡팩 (Sixtyfour 레지던스용):</strong> 불닭볶음면 (초6 쌍둥이 최애), 튜브형 볶음고추장, 햇반, 김, 일회용 나무젓가락</li>
+          <li><strong>💳 서류 & 결제 수단:</strong> 여권 4인 실물 (만료일 6개월 이상 확인완료) + 사본 및 사진, 트래블카드 2장 (트래블로그/트래블월렛 부모 분산 소지), KB BeV V 실물카드 (공항 발렛/라운지용), 비상 유로 현금 (50~100€ 소액권 분산 보관)</li>
+          <li><strong>💊 가족 상비약 (D-7 점검):</strong> 해열진통제 (타이레놀/이부프로펜), 종합감기약, 소화제 (베아제/훼스탈), 제산제/지사제, 멀미약, 방수밴드/메디폼/물집패치, 기내 보습제 & 인공눈물</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- 3. 숙소 근처 마트 & 홈쿡 장보기 (연중무휴/한인마트) -->
+    <details class="dash-sub-item">
+      <summary class="dash-sub-title">🛒 숙소 근처 마트 & 홈쿡 장보기 (연중무휴/한인마트)</summary>
+      <div class="dash-sub-content">
+        <ul>
+          <li><strong>Supercor Exprés (Carrer d Aragó 308):</strong> Sixtyfour 도보 2분 (160m) | 07:00~익일 01:00 (★365일 연중무휴 오픈! 일요일·공휴일 12/6, 12/8 정상영업). 신선 과일, 우유, 계란, 빵, 버터</li>
+          <li><strong>Tomato Asian Market (Carrer d Aragó 284):</strong> Sixtyfour 도보 2분 (120m, 카사바트요 뒤편) | 10:00~22:00 (연중무휴). 한국 라면, 햇반, 김, 김치, 버블티 (아이들 비상식량)</li>
+          <li><strong>Mercadona (Carrer del Consell de Cent 366):</strong> Sixtyfour 도보 9분 | 09:00~21:00 (일요/공휴일 휴무). 스페인 1등 국민마트! 홈쿡용 이베리코 돼지고기(Secreto Ibérico), 소고기, 대용량 장보기</li>
+          <li><strong>Supermercado El Corte Inglés (카탈루냐 광장 14 지하 1층):</strong> H10 도보 4분 | 09:00~21:00 (일요 휴무). 신선 손질 과일팩(멜론/파인애플), 델리 식품(초밥, 샐러드, 샌드위치)</li>
+          <li><strong>🍷 추천 스페인 와인 & 올리브유 픽:</strong>
+            <br>• 레드: Costalara Pagos Anguix 2019 (Ribera del Duero), The Golden Stallion Monastrell Organic 2024
+            <br>• 화이트: Mar de Frades (파란병 알바리뇨 17.45€, 칠링 시 범선 그림 나타남)
+            <br>• 올리브유: Oro Bailén Arbequina 500ml (검은병 연두색 뚜껑 13.90€, 세계 1위 엑스트라 버진)
+          </li>
+          <li><strong>💡 스페인 마트 실전 노하우:</strong> 100% 즉석 생오렌지 착즙기(빈 페트병 투입 후 레버를 누르면 갓 짠 과즙) | 과일/채소 위생장갑 착용 후 품목 번호 저울 계량 | 일요·공휴일(12/6 일, 12/8 화) 대형마트 휴무 시 Supercor Exprés 및 Tomato 한인마트 이용</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- 4. 통신·환전·교통 & 대형 밴(XL) 원칙 -->
+    <details class="dash-sub-item">
+      <summary class="dash-sub-title">🚕 통신·환전·교통 & 대형 밴(XL) 원칙</summary>
+      <div class="dash-sub-content">
+        <ul>
+          <li><strong>📱 데이터 로밍:</strong> KT 함께 쓰는 로밍 20GB (대표 김인선 + 가족 3인 등록완료, 12/4 자동개시, 데이터 소진 시 400kbps 무제한 QoS, 고객센터 +82-2-2190-0901)</li>
+          <li><strong>💳 환전 & 결제 수칙:</strong> 트래블로그/트래블월렛 카드 결제 기본 | 비상 현금 50~100€ 소액권 분산 | 음식 주문 시 <em>"Poco sal, por favor (소금 적게)"</em> 필수! 영수증 빵값(Pan) 및 야외 테라스(10~15%) 할증 확인</li>
+          <li><strong>🚕 공항 ↔ 시내 (★대형 밴/XL 필수):</strong> 4인 가족 + 대형 2개 + 기내 2개(총 4개)는 세단 적재 불가! T1 승강장 안내원에게 <em>"Cuatro personas, cuatro maletas (4명, 가방 4개)"</em> 요청 ➔ 대형 밴(벤츠 비토 등) 즉시 배차 (짐 추가비 무료, 공항할증 4.50€ 포함 미터기 약 35~42€). 귀국일(Day 8)은 Sixtyfour 리셉션에 대형 밴 사전 예약 요청!</li>
+          <li><strong>🚕 시내 일상 이동:</strong> 1순위 FREE NOW 앱(노란택시 1만 대) + 2순위 Cabify(정액제) + 길거리 초록불(Lliure) 택시. (우버는 VTC 규제로 대기시간 길어 비추천)</li>
+          <li><strong>🏟️ 캄 노우 직관 후 복귀:</strong> 북측 출구(Joan XXIII) 도보 8분(750m) <a href="https://maps.google.com/?q=Grand+Hyatt+Barcelona" target="_blank">Grand Hyatt Barcelona</a> 로비 전용 택시 승강장 탑승 (추위·인파·차량통제 완벽 회피!)</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- 5. 2차 숙소(레지던스) 대안 검토 (참고용) -->
+    <details class="dash-sub-item">
+      <summary class="dash-sub-title">🏨 2차 숙소(레지던스) 대안 검토 (참고용)</summary>
+      <div class="dash-sub-content">
+        <ul>
+          <li><strong>현재 확정:</strong> Apartments Sixtyfour (Passeig de Gràcia 64, 카사 바트요 정면 맞은편 | 1,490.48€ | Sixtytwo 호텔 연계 24시간 리셉션, 풀키친 완비)</li>
+          <li><strong>1순위 추천 대안:</strong> Suites Avenue Luxe Apartments (Passeig de Gràcia 83, 카사 밀라 정면 맞은편, Sixtyfour 도보 2분 | Derby Hotels 체인 직영, 자체 1층 24시간 전담 리셉션, 카사 밀라 뷰 루프탑 테라스 & 야외 수영장, 사우나, 피트니스, 1박 약 450~600€)</li>
+          <li><strong>기타 검토군:</strong> Casagrand Luxury Suites (100㎡ 대형 스위트, 24시간 버틀러) | Majestic Residence (5성 GL 호텔 연계) | Midtown Apartments (카스프 거리, 모던 신축급)</li>
+        </ul>
+      </div>
+    </details>
+
   </div>
 </div>
 
